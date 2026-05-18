@@ -435,99 +435,12 @@ a {
   font-size: 0.92rem;
 }
 
-.tool-logo {
-  display: inline-grid;
+.tool-logo-image {
+  display: block;
   width: 26px;
   height: 26px;
-  place-items: center;
   flex: 0 0 auto;
-  border-radius: 7px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.adobe-logo {
-  border: 1px solid currentColor;
-}
-
-.photoshop-logo {
-  color: #31a8ff;
-  background: #001e36;
-}
-
-.illustrator-logo {
-  color: #ff9a00;
-  background: #330000;
-}
-
-.indesign-logo {
-  color: #ff3366;
-  background: #49021f;
-}
-
-.canva-logo {
-  border-radius: 50%;
-  color: white;
-  background: linear-gradient(135deg, #00c4cc, #7d2ae8);
-  font-style: italic;
-}
-
-.figma-logo {
-  display: grid;
-  grid-template-columns: repeat(2, 10px);
-  grid-template-rows: repeat(3, 8px);
-  gap: 0;
-  width: 22px;
-  height: 26px;
-  background: transparent;
-}
-
-.figma-logo i {
-  display: block;
-}
-
-.figma-logo i:nth-child(1) {
-  border-radius: 8px 8px 0 8px;
-  background: #f24e1e;
-}
-
-.figma-logo i:nth-child(2) {
-  border-radius: 8px 8px 8px 0;
-  background: #ff7262;
-}
-
-.figma-logo i:nth-child(3) {
-  border-radius: 8px 0 0 8px;
-  background: #a259ff;
-}
-
-.figma-logo i:nth-child(4) {
-  border-radius: 50%;
-  background: #1abcfe;
-}
-
-.figma-logo i:nth-child(5) {
-  border-radius: 8px 0 8px 8px;
-  background: #0acf83;
-}
-
-.blender-logo {
-  border-radius: 50%;
-  background: #fff1e5;
-}
-
-.blender-logo svg {
-  width: 22px;
-  height: 22px;
-}
-
-.blender-logo path {
-  fill: #ea7600;
-}
-
-.blender-logo circle {
-  fill: #236192;
+  object-fit: contain;
 }
 
 .service-grid {
