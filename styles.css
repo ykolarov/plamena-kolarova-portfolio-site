@@ -445,22 +445,16 @@ a {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
 .service-card {
-  min-height: 188px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 184px;
   padding: 22px;
-}
-
-.service-card span {
-  display: inline-flex;
-  margin-bottom: 20px;
-  color: var(--accent);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
 }
 
 .service-card h3 {
@@ -468,9 +462,29 @@ a {
 }
 
 .service-card p {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.service-icon {
+  display: grid;
+  width: 118px;
+  height: 118px;
+  place-items: center;
+  flex: 0 0 118px;
+  border-radius: 24px;
+  background: rgba(109, 66, 255, 0.045);
+}
+
+.service-icon img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.service-content {
+  min-width: 0;
 }
 
 .work-intro {
@@ -876,7 +890,7 @@ a {
   }
 
   .service-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .field-section {
@@ -953,6 +967,10 @@ a {
   .service-grid,
   .field-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    align-items: flex-start;
   }
 
   .field-section {
