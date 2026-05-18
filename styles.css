@@ -41,7 +41,7 @@ a {
 
 .section-shell,
 .site-footer {
-  width: min(1180px, calc(100% - 48px));
+  width: min(1542px, calc(100% - 48px));
   margin: 0 auto;
 }
 
@@ -347,10 +347,6 @@ a {
 .work,
 .contact {
   padding-top: 104px;
-}
-
-.about.section-shell {
-  width: min(1542px, calc(100% - 48px));
 }
 
 .about-grid {
