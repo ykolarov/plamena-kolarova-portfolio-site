@@ -5,7 +5,7 @@ This is a single-page static portfolio starter built from the structure of the P
 - Hero
 - About
 - Services
-- Field-based portfolio sections
+- Filtered field-based portfolio sections
 - Contact
 
 ## What to replace first
@@ -16,7 +16,7 @@ This is a single-page static portfolio starter built from the structure of the P
 
 ## Adding more fields
 
-Duplicate one `.field-section` block in `index.html`, then edit:
+Duplicate one `.field-section` block in `index.html`, add a matching `.field-filter` button above it, then edit:
 
 - the field title
 - the short description

@@ -564,9 +564,47 @@ a {
   margin-bottom: 34px;
 }
 
+.field-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.field-filter {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.78);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.field-filter:hover {
+  transform: translateY(-1px);
+  color: var(--ink);
+}
+
+.field-filter.is-active {
+  color: white;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent), #8766ff);
+}
+
 .field-stack {
   display: grid;
   gap: 46px;
+}
+
+.field-section[hidden] {
+  display: none;
 }
 
 .field-section {
@@ -762,6 +800,70 @@ a {
 
 .field-gallery-banners .field-media:nth-child(4) {
   background: linear-gradient(135deg, #251035, #aa82ff);
+}
+
+.field-gallery-social .field-media:nth-child(1) {
+  background: linear-gradient(135deg, #31113d, #ff7cc8);
+}
+
+.field-gallery-social .field-media:nth-child(2) {
+  background: linear-gradient(135deg, #40105a, #b56cff);
+}
+
+.field-gallery-social .field-media:nth-child(3) {
+  background: linear-gradient(135deg, #21133d, #ff9fcf);
+}
+
+.field-gallery-social .field-media:nth-child(4) {
+  background: linear-gradient(135deg, #37145f, #8d7cff);
+}
+
+.field-gallery-logos .field-media:nth-child(1) {
+  background: linear-gradient(135deg, #191329, #5a4bff);
+}
+
+.field-gallery-logos .field-media:nth-child(2) {
+  background: linear-gradient(135deg, #23163f, #9472ff);
+}
+
+.field-gallery-logos .field-media:nth-child(3) {
+  background: linear-gradient(135deg, #24184a, #b4a5ff);
+}
+
+.field-gallery-logos .field-media:nth-child(4) {
+  background: linear-gradient(135deg, #181225, #7760ff);
+}
+
+.field-gallery-presentation .field-media:nth-child(1) {
+  background: linear-gradient(135deg, #1f163f, #6d42ff);
+}
+
+.field-gallery-presentation .field-media:nth-child(2) {
+  background: linear-gradient(135deg, #27205e, #9d85ff);
+}
+
+.field-gallery-presentation .field-media:nth-child(3) {
+  background: linear-gradient(135deg, #1b1634, #b8a7ff);
+}
+
+.field-gallery-presentation .field-media:nth-child(4) {
+  background: linear-gradient(135deg, #30205b, #7e6bff);
+}
+
+.field-gallery-print .field-media:nth-child(1) {
+  background: linear-gradient(135deg, #2f173f, #f59e0b);
+}
+
+.field-gallery-print .field-media:nth-child(2) {
+  background: linear-gradient(135deg, #26143b, #c084fc);
+}
+
+.field-gallery-print .field-media:nth-child(3) {
+  background: linear-gradient(135deg, #341844, #f7b955);
+}
+
+.field-gallery-print .field-media:nth-child(4) {
+  background: linear-gradient(135deg, #21133d, #a78bfa);
 }
 
 .contact {

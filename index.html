@@ -209,60 +209,68 @@
       <section class="work section-shell" id="work">
         <div class="section-heading work-intro reveal">
           <p class="eyebrow">Selected work</p>
-          <h2>Room for each field to breathe.</h2>
+          <h2>Explore work by field.</h2>
+        </div>
+
+        <div class="field-filters reveal" role="tablist" aria-label="Portfolio categories">
+          <button
+            class="field-filter is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-field-filter="website-designs"
+          >
+            Website Designs
+          </button>
+          <button
+            class="field-filter"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-field-filter="website-banners"
+          >
+            Website Banners
+          </button>
+          <button
+            class="field-filter"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-field-filter="social-media-designs"
+          >
+            Social Media Designs
+          </button>
+          <button
+            class="field-filter"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-field-filter="logos"
+          >
+            Logos
+          </button>
+          <button
+            class="field-filter"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-field-filter="presentation-design"
+          >
+            Presentation Design
+          </button>
+          <button
+            class="field-filter"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-field-filter="print-design"
+          >
+            Print Design
+          </button>
         </div>
 
         <div class="field-stack">
-          <article class="field-section reveal">
-            <div class="field-copy">
-              <p class="field-kicker">Featured works</p>
-              <h3><span>3D</span><strong>Models</strong></h3>
-              <p class="field-description">
-                A selection of academic 3D projects created for university
-                assignments, including models and renders.
-              </p>
-
-              <div class="field-tools">
-                <span>Tools</span>
-                <ul>
-                  <li>
-                    <span class="tool-logo blender-logo" aria-hidden="true">
-                      <svg viewBox="0 0 32 32" role="presentation">
-                        <path
-                          d="M5 15.2c.3-.6.9-1 1.6-1h7.1l-3.2-3.1a1.7 1.7 0 0 1 2.3-2.4l5.8 5.5h3.8c4 0 7.2 2.8 7.2 6.4S26.4 27 22.4 27H17c-3.8 0-6.9-2.4-7.4-5.7H6.6a1.7 1.7 0 0 1-1.6-2.4l1.2-2.5H2.7a1.7 1.7 0 0 1 0-3.4H5Z"
-                        />
-                        <circle cx="21.9" cy="20.6" r="4.3" />
-                      </svg>
-                    </span>
-                    Blender
-                  </li>
-                  <li>
-                    <span class="tool-logo adobe-logo photoshop-logo">Ps</span>
-                    Photoshop
-                  </li>
-                </ul>
-              </div>
-
-              <div class="field-index">01</div>
-            </div>
-
-            <div class="field-gallery field-gallery-3d">
-              <figure class="field-media featured-slot">
-                <span>Hero render</span>
-              </figure>
-              <figure class="field-media">
-                <span>Character scene</span>
-              </figure>
-              <figure class="field-media">
-                <span>Product study</span>
-              </figure>
-              <figure class="field-media">
-                <span>Detail shot</span>
-              </figure>
-            </div>
-          </article>
-
-          <article class="field-section reveal">
+          <article class="field-section reveal is-active" data-field="website-designs">
             <div class="field-copy">
               <p class="field-kicker">Featured works</p>
               <h3><span>Website</span><strong>Designs</strong></h3>
@@ -291,7 +299,7 @@
                 </ul>
               </div>
 
-              <div class="field-index">02</div>
+              <div class="field-index">01</div>
             </div>
 
             <div class="field-gallery field-gallery-web">
@@ -310,7 +318,7 @@
             </div>
           </article>
 
-          <article class="field-section reveal">
+          <article class="field-section reveal" data-field="website-banners" hidden>
             <div class="field-copy">
               <p class="field-kicker">Featured works</p>
               <h3><span>Website</span><strong>Banners</strong></h3>
@@ -333,7 +341,7 @@
                 </ul>
               </div>
 
-              <div class="field-index">03</div>
+              <div class="field-index">02</div>
             </div>
 
             <div class="field-gallery field-gallery-banners">
@@ -348,6 +356,178 @@
               </figure>
               <figure class="field-media">
                 <span>Campaign variation</span>
+              </figure>
+            </div>
+          </article>
+
+          <article class="field-section reveal" data-field="social-media-designs" hidden>
+            <div class="field-copy">
+              <p class="field-kicker">Featured works</p>
+              <h3><span>Social Media</span><strong>Designs</strong></h3>
+              <p class="field-description">
+                Branded posts, story layouts, and campaign visuals designed to stay
+                consistent while still feeling fresh across a content series.
+              </p>
+
+              <div class="field-tools">
+                <span>Tools</span>
+                <ul>
+                  <li>
+                    <span class="tool-logo adobe-logo photoshop-logo">Ps</span>
+                    Photoshop
+                  </li>
+                  <li>
+                    <span class="tool-logo canva-logo">C</span>
+                    Canva
+                  </li>
+                </ul>
+              </div>
+
+              <div class="field-index">03</div>
+            </div>
+
+            <div class="field-gallery field-gallery-social">
+              <figure class="field-media featured-slot">
+                <span>Campaign post</span>
+              </figure>
+              <figure class="field-media">
+                <span>Story sequence</span>
+              </figure>
+              <figure class="field-media">
+                <span>Carousel cover</span>
+              </figure>
+              <figure class="field-media">
+                <span>Feed variation</span>
+              </figure>
+            </div>
+          </article>
+
+          <article class="field-section reveal" data-field="logos" hidden>
+            <div class="field-copy">
+              <p class="field-kicker">Featured works</p>
+              <h3><span>Logo</span><strong>Design</strong></h3>
+              <p class="field-description">
+                Logo concepts and identity marks built around strong shape, clear
+                recognition, and flexible use across digital and print contexts.
+              </p>
+
+              <div class="field-tools">
+                <span>Tools</span>
+                <ul>
+                  <li>
+                    <span class="tool-logo adobe-logo illustrator-logo">Ai</span>
+                    Illustrator
+                  </li>
+                  <li>
+                    <span class="tool-logo adobe-logo photoshop-logo">Ps</span>
+                    Photoshop
+                  </li>
+                </ul>
+              </div>
+
+              <div class="field-index">04</div>
+            </div>
+
+            <div class="field-gallery field-gallery-logos">
+              <figure class="field-media featured-slot">
+                <span>Primary mark</span>
+              </figure>
+              <figure class="field-media">
+                <span>Wordmark</span>
+              </figure>
+              <figure class="field-media">
+                <span>Monogram</span>
+              </figure>
+              <figure class="field-media">
+                <span>Brand lockup</span>
+              </figure>
+            </div>
+          </article>
+
+          <article class="field-section reveal" data-field="presentation-design" hidden>
+            <div class="field-copy">
+              <p class="field-kicker">Featured works</p>
+              <h3><span>Presentation</span><strong>Design</strong></h3>
+              <p class="field-description">
+                Structured slides that turn information into a clear visual story,
+                with strong pacing, hierarchy, and polished layouts.
+              </p>
+
+              <div class="field-tools">
+                <span>Tools</span>
+                <ul>
+                  <li>
+                    <span class="tool-logo canva-logo">C</span>
+                    Canva
+                  </li>
+                  <li>
+                    <span class="tool-logo adobe-logo indesign-logo">Id</span>
+                    InDesign
+                  </li>
+                </ul>
+              </div>
+
+              <div class="field-index">05</div>
+            </div>
+
+            <div class="field-gallery field-gallery-presentation">
+              <figure class="field-media featured-slot">
+                <span>Cover slide</span>
+              </figure>
+              <figure class="field-media">
+                <span>Data slide</span>
+              </figure>
+              <figure class="field-media">
+                <span>Section opener</span>
+              </figure>
+              <figure class="field-media">
+                <span>Closing slide</span>
+              </figure>
+            </div>
+          </article>
+
+          <article class="field-section reveal" data-field="print-design" hidden>
+            <div class="field-copy">
+              <p class="field-kicker">Featured works</p>
+              <h3><span>Print</span><strong>Design</strong></h3>
+              <p class="field-description">
+                Posters, brochures, and editorial layouts developed with careful
+                typography, balanced spacing, and print-ready composition.
+              </p>
+
+              <div class="field-tools">
+                <span>Tools</span>
+                <ul>
+                  <li>
+                    <span class="tool-logo adobe-logo indesign-logo">Id</span>
+                    InDesign
+                  </li>
+                  <li>
+                    <span class="tool-logo adobe-logo illustrator-logo">Ai</span>
+                    Illustrator
+                  </li>
+                  <li>
+                    <span class="tool-logo adobe-logo photoshop-logo">Ps</span>
+                    Photoshop
+                  </li>
+                </ul>
+              </div>
+
+              <div class="field-index">06</div>
+            </div>
+
+            <div class="field-gallery field-gallery-print">
+              <figure class="field-media featured-slot">
+                <span>Poster</span>
+              </figure>
+              <figure class="field-media">
+                <span>Brochure spread</span>
+              </figure>
+              <figure class="field-media">
+                <span>Flyer</span>
+              </figure>
+              <figure class="field-media">
+                <span>Editorial detail</span>
               </figure>
             </div>
           </article>
