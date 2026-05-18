@@ -829,6 +829,9 @@ a {
 }
 
 .contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   padding: 12px 16px;
   border-radius: 999px;
   color: var(--ink);
@@ -841,6 +844,12 @@ a {
 .contact-links a:hover {
   transform: translateY(-2px);
   background: #dfd8ff;
+}
+
+.contact-link-linkedin img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .site-footer {
