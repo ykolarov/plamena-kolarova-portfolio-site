@@ -119,12 +119,43 @@
           <div class="tool-panel card reveal">
             <h3>Tools</h3>
             <div class="tool-list" aria-label="Design tools">
-              <span>Photoshop</span>
-              <span>Illustrator</span>
-              <span>InDesign</span>
-              <span>Canva</span>
-              <span>Figma</span>
-              <span>Blender</span>
+              <span class="tool-chip">
+                <span class="tool-logo adobe-logo photoshop-logo">Ps</span>
+                <span>Photoshop</span>
+              </span>
+              <span class="tool-chip">
+                <span class="tool-logo adobe-logo illustrator-logo">Ai</span>
+                <span>Illustrator</span>
+              </span>
+              <span class="tool-chip">
+                <span class="tool-logo adobe-logo indesign-logo">Id</span>
+                <span>InDesign</span>
+              </span>
+              <span class="tool-chip">
+                <span class="tool-logo canva-logo">C</span>
+                <span>Canva</span>
+              </span>
+              <span class="tool-chip">
+                <span class="tool-logo figma-logo" aria-hidden="true">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </span>
+                <span>Figma</span>
+              </span>
+              <span class="tool-chip">
+                <span class="tool-logo blender-logo" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" role="presentation">
+                    <path
+                      d="M5 15.2c.3-.6.9-1 1.6-1h7.1l-3.2-3.1a1.7 1.7 0 0 1 2.3-2.4l5.8 5.5h3.8c4 0 7.2 2.8 7.2 6.4S26.4 27 22.4 27H17c-3.8 0-6.9-2.4-7.4-5.7H6.6a1.7 1.7 0 0 1-1.6-2.4l1.2-2.5H2.7a1.7 1.7 0 0 1 0-3.4H5Z"
+                    />
+                    <circle cx="21.9" cy="20.6" r="4.3" />
+                  </svg>
+                </span>
+                <span>Blender</span>
+              </span>
             </div>
           </div>
         </div>
@@ -176,107 +207,151 @@
       </section>
 
       <section class="work section-shell" id="work">
-        <div class="work-header">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Selected work</p>
-            <h2>A portfolio built to show range, not repetition.</h2>
-          </div>
-
-          <div class="filter-group reveal" role="tablist" aria-label="Project filters">
-            <button class="filter is-active" type="button" data-filter="all">All</button>
-            <button class="filter" type="button" data-filter="3d">3D</button>
-            <button class="filter" type="button" data-filter="web">Web</button>
-            <button class="filter" type="button" data-filter="campaign">Campaign</button>
-            <button class="filter" type="button" data-filter="brand">Brand</button>
-          </div>
+        <div class="section-heading work-intro reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Room for each field to breathe.</h2>
         </div>
 
-        <div class="work-grid">
-          <!-- Replace placeholder visuals with your own <img> tags when final assets are ready. -->
-          <article class="work-card reveal" data-category="3d">
-            <div class="work-visual visual-3d">
-              <span>3D</span>
+        <div class="field-stack">
+          <article class="field-section reveal">
+            <div class="field-copy">
+              <p class="field-kicker">Featured works</p>
+              <h3><span>3D</span><strong>Models</strong></h3>
+              <p class="field-description">
+                A selection of academic 3D projects created for university
+                assignments, including models and renders.
+              </p>
+
+              <div class="field-tools">
+                <span>Tools</span>
+                <ul>
+                  <li>
+                    <span class="tool-logo blender-logo" aria-hidden="true">
+                      <svg viewBox="0 0 32 32" role="presentation">
+                        <path
+                          d="M5 15.2c.3-.6.9-1 1.6-1h7.1l-3.2-3.1a1.7 1.7 0 0 1 2.3-2.4l5.8 5.5h3.8c4 0 7.2 2.8 7.2 6.4S26.4 27 22.4 27H17c-3.8 0-6.9-2.4-7.4-5.7H6.6a1.7 1.7 0 0 1-1.6-2.4l1.2-2.5H2.7a1.7 1.7 0 0 1 0-3.4H5Z"
+                        />
+                        <circle cx="21.9" cy="20.6" r="4.3" />
+                      </svg>
+                    </span>
+                    Blender
+                  </li>
+                  <li>
+                    <span class="tool-logo adobe-logo photoshop-logo">Ps</span>
+                    Photoshop
+                  </li>
+                </ul>
+              </div>
+
+              <div class="field-index">01</div>
             </div>
-            <div class="work-copy">
-              <p>3D models</p>
-              <h3>Academic render collection</h3>
-              <span>Blender · Photoshop</span>
+
+            <div class="field-gallery field-gallery-3d">
+              <figure class="field-media featured-slot">
+                <span>Hero render</span>
+              </figure>
+              <figure class="field-media">
+                <span>Character scene</span>
+              </figure>
+              <figure class="field-media">
+                <span>Product study</span>
+              </figure>
+              <figure class="field-media">
+                <span>Detail shot</span>
+              </figure>
             </div>
           </article>
 
-          <article class="work-card reveal" data-category="web">
-            <div class="work-visual visual-web">
-              <span>Web</span>
+          <article class="field-section reveal">
+            <div class="field-copy">
+              <p class="field-kicker">Featured works</p>
+              <h3><span>Website</span><strong>Designs</strong></h3>
+              <p class="field-description">
+                A collection of responsive layouts and landing page concepts
+                designed for clarity, hierarchy, and polished digital presentation.
+              </p>
+
+              <div class="field-tools">
+                <span>Tools</span>
+                <ul>
+                  <li>
+                    <span class="tool-logo figma-logo" aria-hidden="true">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </span>
+                    Figma
+                  </li>
+                  <li>
+                    <span class="tool-logo canva-logo">C</span>
+                    Canva
+                  </li>
+                </ul>
+              </div>
+
+              <div class="field-index">02</div>
             </div>
-            <div class="work-copy">
-              <p>Website design</p>
-              <h3>Responsive landing page concepts</h3>
-              <span>Figma · Canva</span>
+
+            <div class="field-gallery field-gallery-web">
+              <figure class="field-media featured-slot">
+                <span>Desktop concept</span>
+              </figure>
+              <figure class="field-media">
+                <span>Landing page</span>
+              </figure>
+              <figure class="field-media">
+                <span>Mobile screens</span>
+              </figure>
+              <figure class="field-media">
+                <span>UI detail</span>
+              </figure>
             </div>
           </article>
 
-          <article class="work-card reveal" data-category="campaign">
-            <div class="work-visual visual-campaign">
-              <span>Ads</span>
-            </div>
-            <div class="work-copy">
-              <p>Website banners</p>
-              <h3>Campaign banner system</h3>
-              <span>Photoshop · Canva</span>
-            </div>
-          </article>
+          <article class="field-section reveal">
+            <div class="field-copy">
+              <p class="field-kicker">Featured works</p>
+              <h3><span>Website</span><strong>Banners</strong></h3>
+              <p class="field-description">
+                Campaign graphics adapted for different web formats, with emphasis
+                on strong visual hierarchy and consistent brand treatment.
+              </p>
 
-          <article class="work-card reveal" data-category="brand">
-            <div class="work-visual visual-brand">
-              <span>ID</span>
-            </div>
-            <div class="work-copy">
-              <p>Brand identity</p>
-              <h3>Visual system placeholder</h3>
-              <span>Logo · Type · Colour</span>
-            </div>
-          </article>
+              <div class="field-tools">
+                <span>Tools</span>
+                <ul>
+                  <li>
+                    <span class="tool-logo adobe-logo photoshop-logo">Ps</span>
+                    Photoshop
+                  </li>
+                  <li>
+                    <span class="tool-logo canva-logo">C</span>
+                    Canva
+                  </li>
+                </ul>
+              </div>
 
-          <article class="work-card reveal" data-category="campaign">
-            <div class="work-visual visual-social">
-              <span>Social</span>
+              <div class="field-index">03</div>
             </div>
-            <div class="work-copy">
-              <p>Social media</p>
-              <h3>Launch content series</h3>
-              <span>Stories · Carousels · Posts</span>
-            </div>
-          </article>
 
-          <article class="work-card reveal" data-category="brand">
-            <div class="work-visual visual-print">
-              <span>Print</span>
-            </div>
-            <div class="work-copy">
-              <p>Presentation & print</p>
-              <h3>Editorial deck concept</h3>
-              <span>Slides · Brochures · Posters</span>
+            <div class="field-gallery field-gallery-banners">
+              <figure class="field-media featured-slot">
+                <span>Hero banner</span>
+              </figure>
+              <figure class="field-media">
+                <span>Leaderboard</span>
+              </figure>
+              <figure class="field-media">
+                <span>Social crop</span>
+              </figure>
+              <figure class="field-media">
+                <span>Campaign variation</span>
+              </figure>
             </div>
           </article>
         </div>
-      </section>
-
-      <section class="feature-band section-shell">
-        <article class="feature-card reveal">
-          <p>01</p>
-          <h3>3D models</h3>
-          <span>Academic renders, mockups, and visual exploration.</span>
-        </article>
-        <article class="feature-card reveal">
-          <p>02</p>
-          <h3>Website designs</h3>
-          <span>Layout systems, landing pages, and interface direction.</span>
-        </article>
-        <article class="feature-card reveal">
-          <p>03</p>
-          <h3>Website banners</h3>
-          <span>Campaign graphics adapted for multiple formats.</span>
-        </article>
       </section>
 
       <section class="contact section-shell" id="contact">
