@@ -349,9 +349,13 @@ a {
   padding-top: 104px;
 }
 
+.about.section-shell {
+  width: min(1542px, calc(100% - 48px));
+}
+
 .about-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.8fr 0.9fr;
+  grid-template-columns: 1.3fr 0.8fr 0.9fr 0.9fr;
   gap: 18px;
 }
 
@@ -364,7 +368,8 @@ a {
 
 .about-copy,
 .about-panel,
-.tool-panel {
+.tool-panel,
+.additional-tools-panel {
   padding: 26px;
 }
 
@@ -385,6 +390,7 @@ a {
 
 .about-panel h3,
 .tool-panel h3,
+.additional-tools-panel h3,
 .service-card h3,
 .field-copy h3 {
   margin: 0;
@@ -421,6 +427,33 @@ a {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
+}
+
+.additional-tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.additional-tool-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: white;
+  font-size: 0.92rem;
+}
+
+.additional-tool-list small {
+  color: var(--accent-strong);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .tool-chip {
