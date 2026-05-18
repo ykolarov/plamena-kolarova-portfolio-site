@@ -121,22 +121,25 @@ a {
 }
 
 .hero {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.78fr);
-  gap: 48px;
-  align-items: center;
-  min-height: 680px;
+  width: 100%;
   margin-top: 24px;
-  padding: clamp(28px, 5vw, 64px);
-  overflow: hidden;
-  border-radius: var(--radius-xl);
   color: white;
   background:
     radial-gradient(circle at 76% 18%, rgba(160, 126, 255, 0.34), transparent 22%),
     radial-gradient(circle at 86% 78%, rgba(110, 66, 255, 0.2), transparent 26%),
     linear-gradient(135deg, var(--hero) 0%, #17102f 48%, var(--hero-soft) 100%);
   box-shadow: var(--shadow);
+}
+
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.78fr);
+  gap: 48px;
+  align-items: center;
+  min-height: 680px;
+  padding: clamp(28px, 5vw, 64px);
+  overflow: hidden;
 }
 
 .eyebrow {
@@ -733,6 +736,10 @@ a {
     min-height: auto;
   }
 
+  .hero-inner {
+    min-height: auto;
+  }
+
   .hero-visual {
     min-height: 340px;
   }
@@ -781,7 +788,10 @@ a {
 
   .hero {
     margin-top: 16px;
-    padding: 26px;
+  }
+
+  .hero-inner {
+    padding: 26px 0;
   }
 
   .hero h1 {
