@@ -8,6 +8,17 @@
       content="Portfolio of Plamena Kolarova, graphic designer working across branding, digital campaigns, web design, and 3D visuals."
     />
     <title>Plamena Kolarova — Graphic Design Portfolio</title>
+    <script>
+      (() => {
+        try {
+          if (window.localStorage.getItem("portfolioTheme") === "dark") {
+            document.documentElement.dataset.theme = "dark";
+          }
+        } catch {
+          // Keep the default light theme if storage is unavailable.
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -26,6 +37,24 @@
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <div class="header-actions">
+        <div class="language-toggle" role="group" aria-label="Language selection">
+          <button class="language-option is-active" type="button" data-language="en" aria-pressed="true">
+            EN
+          </button>
+          <button class="language-option" type="button" data-language="bg" aria-pressed="false">
+            BG
+          </button>
+        </div>
+
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to night mode">
+          <span class="theme-icon" aria-hidden="true">
+            <img src="Night_Light_Mode/Night.png" alt="" />
+          </span>
+          <span class="theme-label">Night</span>
+        </button>
+      </div>
     </header>
 
     <main id="top">
@@ -638,20 +667,59 @@
 
       <section class="contact section-shell" id="contact">
         <div class="contact-card reveal">
-          <p class="eyebrow">Let’s work together</p>
-          <h2>Need a designer who can move across formats without losing the brand?</h2>
-          <p>
-            I’m available for graphic design, digital campaign, and portfolio-ready
-            visual work.
-          </p>
+          <div class="contact-copy">
+            <p class="eyebrow">Let’s work together</p>
+            <h2>Need a designer who can move across formats without losing the brand?</h2>
+            <p>
+              I’m available for graphic design, digital campaign, and portfolio-ready
+              visual work. Send a quick message and I’ll get back to you.
+            </p>
 
-          <div class="contact-links">
-            <a href="mailto:kolarovaplamena@gmail.com">kolarovaplamena@gmail.com</a>
-            <a class="contact-link-linkedin" href="#">
-              <img src="Logos/linkedin_logo.png" alt="" />
-              <span>LinkedIn</span>
-            </a>
+            <div class="contact-links">
+              <a href="mailto:kolarovaplamena@gmail.com">kolarovaplamena@gmail.com</a>
+              <a class="contact-link-linkedin" href="#">
+                <img src="Logos/linkedin_logo.png" alt="" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
+
+          <form class="contact-form" data-contact-form>
+            <div class="form-field">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-project">Project type</label>
+              <select id="contact-project" name="project">
+                <option value="Graphic design project">Graphic design project</option>
+                <option value="Branding">Branding</option>
+                <option value="Website design">Website design</option>
+                <option value="Social media design">Social media design</option>
+                <option value="Print or presentation design">Print or presentation design</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                placeholder="Tell me what you need help with..."
+                required
+              ></textarea>
+            </div>
+
+            <button class="button button-primary" type="submit">Send message</button>
+            <span class="form-status" data-form-status></span>
+          </form>
         </div>
       </section>
     </main>
