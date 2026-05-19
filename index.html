@@ -361,11 +361,20 @@
                 ‹
               </button>
               <div class="slider-stage">
-                <figure class="slider-slide image-slide is-active">
+                <figure class="slider-slide image-slide is-active" data-slide-ratio="wide">
                   <img src="Website%20Banners/1.png" alt="Website banner design 1" />
                 </figure>
-                <figure class="slider-slide image-slide">
+                <figure class="slider-slide image-slide" data-slide-ratio="wide">
                   <img src="Website%20Banners/2.png" alt="Website banner design 2" />
+                </figure>
+                <figure class="slider-slide image-slide" data-slide-ratio="standard">
+                  <img src="Website%20Banners/cyrene.jpg" alt="Cyrene website banner design" />
+                </figure>
+                <figure class="slider-slide image-slide" data-slide-ratio="standard">
+                  <img src="Website%20Banners/herta.jpg" alt="Herta website banner design" />
+                </figure>
+                <figure class="slider-slide image-slide" data-slide-ratio="standard">
+                  <img src="Website%20Banners/sw.jpg" alt="SW website banner design" />
                 </figure>
               </div>
               <button class="slider-arrow slider-arrow-next" type="button" aria-label="Next website banner image">
@@ -779,6 +788,35 @@
         </div>
       </section>
     </main>
+
+    <div class="image-lightbox" data-image-lightbox hidden>
+      <div class="lightbox-backdrop" data-lightbox-close></div>
+      <section class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="lightbox-toolbar">
+          <div>
+            <p class="lightbox-kicker">Image preview</p>
+            <h2 data-lightbox-title>Selected image</h2>
+          </div>
+          <div class="lightbox-actions">
+            <a class="lightbox-original" data-lightbox-original href="#" target="_blank" rel="noopener">
+              Open original
+            </a>
+            <button
+              class="lightbox-close"
+              type="button"
+              data-lightbox-close
+              data-lightbox-close-button
+              aria-label="Close image preview"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+        <div class="lightbox-scroll">
+          <img data-lightbox-image src="" alt="" />
+        </div>
+      </section>
+    </div>
 
     <footer class="site-footer">
       <p>© <span id="year"></span> Plamena Kolarova. All rights reserved.</p>

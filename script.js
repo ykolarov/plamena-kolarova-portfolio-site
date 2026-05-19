@@ -7,6 +7,11 @@ const themeToggle = document.querySelector("[data-theme-toggle]");
 const themeIconImage = document.querySelector(".theme-icon img");
 const revealItems = document.querySelectorAll(".reveal");
 const metaDescription = document.querySelector('meta[name="description"]');
+const imageLightbox = document.querySelector("[data-image-lightbox]");
+const lightboxImage = document.querySelector("[data-lightbox-image]");
+const lightboxTitle = document.querySelector("[data-lightbox-title]");
+const lightboxOriginal = document.querySelector("[data-lightbox-original]");
+const lightboxCloseButtons = document.querySelectorAll("[data-lightbox-close]");
 
 const translations = {
   en: {
@@ -26,6 +31,14 @@ const translations = {
       toLight: "Light",
       switchToDark: "Switch to night mode",
       switchToLight: "Switch to light mode",
+    },
+    imageViewer: {
+      view: "View image",
+      kicker: "Image preview",
+      title: "Selected image",
+      openOriginal: "Open original",
+      close: "Close image preview",
+      label: "Full-size image preview",
     },
     nav: ["About", "Work", "Services", "Contact"],
     brandRole: "Graphic Designer",
@@ -239,6 +252,14 @@ const translations = {
       toLight: "Светла",
       switchToDark: "Превключи към нощен режим",
       switchToLight: "Превключи към светъл режим",
+    },
+    imageViewer: {
+      view: "Виж изображение",
+      kicker: "Преглед на изображение",
+      title: "Избрано изображение",
+      openOriginal: "Отвори оригинала",
+      close: "Затвори прегледа",
+      label: "Преглед на изображение в пълен размер",
     },
     nav: ["За мен", "Проекти", "Услуги", "Контакт"],
     brandRole: "Графичен дизайнер",
@@ -538,6 +559,94 @@ const updateContactForm = (copy) => {
   });
 };
 
+const updateImageViewerCopy = (copy) => {
+  document.querySelectorAll("[data-view-image]").forEach((button) => {
+    const image = button.closest(".slider-slide")?.querySelector("img");
+    const title = image?.alt || copy.imageViewer.title;
+
+    button.textContent = copy.imageViewer.view;
+    button.setAttribute("aria-label", `${copy.imageViewer.view}: ${title}`);
+  });
+
+  setText(".lightbox-kicker", copy.imageViewer.kicker);
+  setText("[data-lightbox-original]", copy.imageViewer.openOriginal);
+  setAttribute(".lightbox-panel", "aria-label", copy.imageViewer.label);
+  setAttribute("[data-lightbox-close-button]", "aria-label", copy.imageViewer.close);
+
+  if (imageLightbox?.hidden) {
+    setText("[data-lightbox-title]", copy.imageViewer.title);
+  }
+};
+
+let lastFocusedElement = null;
+
+const closeImageLightbox = () => {
+  if (!imageLightbox || imageLightbox.hidden) return;
+
+  imageLightbox.hidden = true;
+  document.body.classList.remove("body-lightbox-open");
+
+  if (lightboxImage) {
+    lightboxImage.removeAttribute("src");
+    lightboxImage.alt = "";
+  }
+
+  lastFocusedElement?.focus?.();
+  lastFocusedElement = null;
+};
+
+const openImageLightbox = (image) => {
+  if (!imageLightbox || !lightboxImage || !lightboxOriginal) return;
+
+  const copy = translations[currentLanguage] || translations.en;
+  const source = image.getAttribute("src") || image.currentSrc || image.src;
+  const title = image.alt || copy.imageViewer.title;
+
+  lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  lightboxImage.src = source;
+  lightboxImage.alt = title;
+  lightboxOriginal.href = source;
+  setText("[data-lightbox-title]", title);
+
+  imageLightbox.hidden = false;
+  document.body.classList.add("body-lightbox-open");
+  document.querySelector("[data-lightbox-close-button]")?.focus();
+};
+
+const setupImageViewer = () => {
+  document.querySelectorAll(".slider-slide.image-slide img").forEach((image) => {
+    const slide = image.closest(".slider-slide");
+    if (!slide) return;
+
+    let button = slide.querySelector("[data-view-image]");
+
+    if (!button) {
+      button = document.createElement("button");
+      button.className = "view-image-button";
+      button.type = "button";
+      button.dataset.viewImage = "";
+      slide.appendChild(button);
+    }
+
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      openImageLightbox(image);
+    });
+
+    image.addEventListener("click", () => openImageLightbox(image));
+  });
+
+  lightboxCloseButtons.forEach((button) => {
+    button.addEventListener("click", closeImageLightbox);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeImageLightbox();
+    }
+  });
+};
+
 const renderFooter = (copy) => {
   const footerText = document.querySelector(".site-footer p");
   if (!footerText) return;
@@ -643,6 +752,7 @@ const applyLanguage = (language) => {
   setText(".contact-copy > p:not(.eyebrow)", copy.contact.body);
   setText(".contact-link-linkedin span", copy.contact.linkedin);
   updateContactForm(copy);
+  updateImageViewerCopy(copy);
 
   renderFooter(copy);
 
@@ -691,6 +801,7 @@ contactForm?.addEventListener("submit", (event) => {
   window.location.href = `mailto:kolarovaplamena@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 
+setupImageViewer();
 applyLanguage(currentLanguage);
 
 const updateSlider = (slider, targetIndex) => {
@@ -712,6 +823,7 @@ const updateSlider = (slider, targetIndex) => {
   });
 
   slider.dataset.activeSlide = String(nextIndex);
+  slider.dataset.activeRatio = slides[nextIndex].dataset.slideRatio || "default";
 };
 
 sliders.forEach((slider) => {

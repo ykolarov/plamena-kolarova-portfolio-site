@@ -975,6 +975,45 @@ html[data-theme="dark"] .theme-toggle {
   display: none;
 }
 
+.view-image-button {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  color: white;
+  background: rgba(18, 15, 37, 0.42);
+  box-shadow: 0 12px 28px rgba(18, 15, 37, 0.18);
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.view-image-button::after {
+  content: "↗";
+  font-size: 0.82rem;
+}
+
+.view-image-button:hover {
+  transform: translateY(-1px);
+  background: rgba(109, 66, 255, 0.82);
+}
+
+.slider-slide.image-slide img {
+  cursor: zoom-in;
+}
+
 .field-slider-banners .slider-stage,
 .field-slider-presentation .slider-stage,
 .field-slider-3d .slider-stage {
@@ -985,6 +1024,10 @@ html[data-theme="dark"] .theme-toggle {
 
 .field-slider-banners .slider-stage {
   aspect-ratio: 1512 / 600;
+}
+
+.field-slider-banners[data-active-ratio="standard"] .slider-stage {
+  aspect-ratio: 16 / 9;
 }
 
 .field-slider-presentation .slider-stage,
@@ -1410,6 +1453,130 @@ html[data-theme="dark"] .form-field textarea::placeholder {
   color: rgba(197, 187, 219, 0.7);
 }
 
+.body-lightbox-open {
+  overflow: hidden;
+}
+
+.image-lightbox[hidden] {
+  display: none;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 8, 24, 0.78);
+  backdrop-filter: blur(18px);
+}
+
+.lightbox-panel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(calc(100vw - 36px), 1920px);
+  max-height: calc(100vh - 36px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 28px;
+  background: var(--surface-strong);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+  overflow: hidden;
+}
+
+.lightbox-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.lightbox-kicker {
+  margin: 0 0 4px;
+  color: var(--accent-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.lightbox-toolbar h2 {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+  letter-spacing: -0.04em;
+}
+
+.lightbox-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.lightbox-original,
+.lightbox-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border-radius: 999px;
+}
+
+.lightbox-original {
+  padding: 0 16px;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), #8766ff);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.lightbox-close {
+  width: 42px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--surface);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.lightbox-scroll {
+  overflow: auto;
+  padding: 22px;
+  background:
+    radial-gradient(circle at top right, rgba(109, 66, 255, 0.08), transparent 24%),
+    #f8f7fc;
+}
+
+.lightbox-scroll img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 18px 44px rgba(18, 15, 37, 0.18);
+}
+
+html[data-theme="dark"] .lightbox-scroll {
+  background:
+    radial-gradient(circle at top right, rgba(155, 124, 255, 0.14), transparent 24%),
+    #0d0a18;
+}
+
+html[data-theme="dark"] .lightbox-close {
+  background: rgba(31, 24, 51, 0.9);
+}
+
 .site-footer {
   padding-bottom: 32px;
   color: var(--muted);
@@ -1611,6 +1778,28 @@ html[data-theme="dark"] .form-field textarea::placeholder {
     width: 44px;
     height: 44px;
     font-size: 1.7rem;
+  }
+
+  .view-image-button {
+    right: 12px;
+    top: 12px;
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 0.78rem;
+  }
+
+  .lightbox-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .lightbox-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lightbox-scroll {
+    padding: 12px;
   }
 
   .about,
