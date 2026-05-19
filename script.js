@@ -27,7 +27,7 @@ const translations = {
       switchToDark: "Switch to night mode",
       switchToLight: "Switch to light mode",
     },
-    nav: ["About", "Services", "Work", "Contact"],
+    nav: ["About", "Work", "Services", "Contact"],
     brandRole: "Graphic Designer",
     hero: {
       eyebrow: "Brand, campaign & digital design",
@@ -229,7 +229,7 @@ const translations = {
       switchToDark: "Превключи към нощен режим",
       switchToLight: "Превключи към светъл режим",
     },
-    nav: ["За мен", "Услуги", "Проекти", "Контакт"],
+    nav: ["За мен", "Проекти", "Услуги", "Контакт"],
     brandRole: "Графичен дизайнер",
     hero: {
       eyebrow: "Бранд, кампании и дигитален дизайн",
