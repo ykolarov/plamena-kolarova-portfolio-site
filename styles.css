@@ -227,6 +227,7 @@ a {
 }
 
 .hero-meta strong {
+  color: white;
   font-size: 1.4rem;
 }
 
@@ -1067,6 +1068,14 @@ a {
   .hero-actions,
   .hero-meta {
     display: grid;
+  }
+
+  .hero-meta {
+    gap: 12px;
+  }
+
+  .hero-meta li {
+    flex: none;
   }
 
   .hero-visual {
