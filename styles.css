@@ -241,94 +241,197 @@ a {
   min-height: 460px;
 }
 
-.hero-orb {
+.device-scene {
+  position: absolute;
+  inset: 18px 0 0;
+}
+
+.mockup-laptop {
+  position: absolute;
+  right: 38px;
+  bottom: 72px;
+  width: min(86%, 520px);
+  filter: drop-shadow(0 28px 44px rgba(5, 3, 16, 0.38));
+}
+
+.mockup-screen {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 10px solid #171326;
+  border-radius: 26px 26px 18px 18px;
+  background:
+    radial-gradient(circle at 86% 16%, rgba(255, 255, 255, 0.34), transparent 20%),
+    linear-gradient(135deg, #4820b7, #7d4dff 52%, #1b1236);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 20px 60px rgba(7, 4, 18, 0.38);
+}
+
+.mockup-screen::before,
+.mockup-screen::after {
+  content: "";
   position: absolute;
   border-radius: 50%;
-  filter: blur(2px);
+  background: rgba(255, 255, 255, 0.16);
 }
 
-.hero-orb-large {
-  top: 36px;
-  right: 24px;
-  width: 180px;
-  height: 180px;
-  background: radial-gradient(circle at 30% 30%, #d4cbff, rgba(109, 66, 255, 0.3));
+.mockup-screen::before {
+  width: 190px;
+  height: 190px;
+  right: -42px;
+  top: -44px;
 }
 
-.hero-orb-small {
-  bottom: 42px;
-  left: 12px;
-  width: 96px;
-  height: 96px;
-  background: radial-gradient(circle at 30% 30%, #ffffff, rgba(109, 66, 255, 0.1));
+.mockup-screen::after {
+  width: 150px;
+  height: 150px;
+  left: -58px;
+  bottom: -60px;
 }
 
-.showcase-card {
+.mockup-browser {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 7px;
+  padding: 16px;
+}
+
+.mockup-browser span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.mockup-screen-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+  align-content: center;
+  height: calc(100% - 42px);
+  padding: 0 34px 34px;
+}
+
+.mockup-screen-content p {
+  width: max-content;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #d6ccff;
+  background: rgba(255, 255, 255, 0.11);
+  font-size: 0.76rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.mockup-screen-content strong {
+  max-width: 280px;
+  color: white;
+  font-size: clamp(1.7rem, 2.7vw, 2.7rem);
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.mockup-base {
+  width: 112%;
+  height: 22px;
+  margin-left: -6%;
+  border-radius: 0 0 32px 32px;
+  background: linear-gradient(180deg, #d8d4e7, #847c9e);
+  box-shadow: inset 0 5px 8px rgba(255, 255, 255, 0.4);
+}
+
+.mockup-phone {
   position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 18px 60px rgba(6, 4, 16, 0.32);
+  right: 0;
+  bottom: 34px;
+  display: grid;
+  align-content: center;
+  width: 132px;
+  height: 226px;
+  padding: 20px 14px;
+  border: 8px solid #141126;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.28), transparent 20%),
+    linear-gradient(145deg, #25144f, #7d4dff);
+  box-shadow: 0 24px 46px rgba(5, 3, 16, 0.34);
+}
+
+.phone-speaker {
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  width: 34px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.34);
+  transform: translateX(-50%);
+}
+
+.phone-content {
+  display: grid;
+  gap: 6px;
+  color: white;
+}
+
+.phone-content span {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.phone-content strong {
+  font-size: 1.12rem;
+}
+
+.floating-glass {
+  position: absolute;
+  display: grid;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.085);
+  box-shadow: 0 18px 50px rgba(6, 4, 16, 0.28);
   backdrop-filter: blur(18px);
 }
 
-.showcase-card-main {
-  top: 68px;
-  right: 0;
-  width: min(100%, 370px);
-  padding: 28px;
-  border-radius: 28px;
+.floating-glass span {
+  color: rgba(255, 255, 255, 0.58);
 }
 
-.showcase-card-main h2 {
-  margin: 12px 0 10px;
-  font-size: 2rem;
-  letter-spacing: -0.04em;
+.floating-glass strong {
+  color: white;
 }
 
-.showcase-card-main p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 1.6;
+.floating-glass-large {
+  top: 32px;
+  left: 22px;
+  width: 250px;
+  padding: 20px;
+  border-radius: 24px;
 }
 
-.mini-label {
-  display: inline-flex;
-  padding: 8px 10px;
-  border-radius: 999px;
-  color: #d6ccff;
-  background: rgba(255, 255, 255, 0.09);
-  font-size: 0.76rem;
-  text-transform: uppercase;
+.floating-glass-large span {
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.showcase-card-secondary,
-.showcase-card-tertiary {
-  display: grid;
-  gap: 6px;
-  width: 170px;
-  padding: 22px;
-  border-radius: 22px;
+.floating-glass-large strong {
+  font-size: 1.45rem;
 }
 
-.showcase-card-secondary {
-  bottom: 42px;
-  right: 190px;
+.floating-glass-small {
+  left: 72px;
+  bottom: 12px;
+  width: 150px;
+  padding: 18px;
+  border-radius: 20px;
 }
 
-.showcase-card-tertiary {
-  bottom: 0;
-  right: 0;
-}
-
-.showcase-card-secondary span,
-.showcase-card-tertiary span {
-  color: rgba(255, 255, 255, 0.64);
-}
-
-.showcase-card-secondary strong,
-.showcase-card-tertiary strong {
-  font-size: 1.3rem;
+.floating-glass-small strong {
+  font-size: 1.2rem;
 }
 
 .section-heading {
@@ -1004,13 +1107,21 @@ a {
     min-height: 340px;
   }
 
-  .showcase-card-main {
-    right: auto;
+  .mockup-laptop {
+    right: 70px;
+    width: min(78%, 520px);
+  }
+
+  .mockup-phone {
+    right: 12px;
+  }
+
+  .floating-glass-large {
     left: 0;
   }
 
-  .showcase-card-secondary {
-    right: 178px;
+  .floating-glass-small {
+    left: 36px;
   }
 
   .service-grid {
@@ -1082,22 +1193,33 @@ a {
     min-height: 320px;
   }
 
-  .showcase-card-main {
-    width: 100%;
+  .device-scene {
+    inset: 0;
   }
 
-  .showcase-card-secondary,
-  .showcase-card-tertiary {
-    width: calc(50% - 6px);
+  .mockup-laptop {
+    right: 18px;
+    bottom: 70px;
+    width: calc(100% - 38px);
   }
 
-  .showcase-card-secondary {
-    right: auto;
+  .mockup-phone {
+    right: 6px;
+    bottom: 32px;
+    width: 96px;
+    height: 166px;
+    border-width: 6px;
+  }
+
+  .floating-glass-large {
+    top: 0;
     left: 0;
+    width: 210px;
+    padding: 16px;
   }
 
-  .showcase-card-tertiary {
-    right: 0;
+  .floating-glass-small {
+    display: none;
   }
 
   .service-grid {
