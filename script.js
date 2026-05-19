@@ -11,7 +11,6 @@ if (year) {
 const updateSlider = (slider, targetIndex) => {
   const slides = Array.from(slider.querySelectorAll(".slider-slide"));
   const dots = Array.from(slider.querySelectorAll(".slider-dot"));
-  const count = slider.querySelector("[data-slider-count]");
 
   if (!slides.length) return;
 
@@ -26,10 +25,6 @@ const updateSlider = (slider, targetIndex) => {
     dot.classList.toggle("is-active", isActive);
     dot.setAttribute("aria-selected", String(isActive));
   });
-
-  if (count) {
-    count.textContent = `${nextIndex + 1} / ${slides.length}`;
-  }
 
   slider.dataset.activeSlide = String(nextIndex);
 };

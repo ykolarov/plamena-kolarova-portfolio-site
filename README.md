@@ -25,6 +25,7 @@ Duplicate one `.field-section` block in `index.html`, add a matching `.field-fil
 
 To add more images to a category, duplicate one `.slider-slide` inside that field's `.slider-stage`.
 The arrows, dots, and slide counter update automatically.
+Wide rectangular images around 16:9 will fit the slideshow frame best.
 
 ## Files
 
