@@ -108,6 +108,7 @@ const translations = {
         logos: "Logos",
         "presentation-design": "Presentation Design",
         "print-design": "Print Design",
+        "3d-design": "3D Design",
       },
       common: {
         kicker: "Featured works",
@@ -160,7 +161,7 @@ const translations = {
           titleBottom: "Design",
           description:
             "Structured slides that turn information into a clear visual story, with strong pacing, hierarchy, and polished layouts.",
-          slides: ["Cover slide", "Data slide", "Section opener", "Closing slide"],
+          slides: ["IKEA presentation", "Rolex presentation", "Spotify presentation"],
           prev: "Previous presentation design image",
           next: "Next presentation design image",
           dots: "Presentation design slideshow pagination",
@@ -174,6 +175,16 @@ const translations = {
           prev: "Previous print design image",
           next: "Next print design image",
           dots: "Print design slideshow pagination",
+        },
+        "3d-design": {
+          titleTop: "3D",
+          titleBottom: "Design",
+          description:
+            "Various 3D models created during university projects, developed in Blender with a focus on modelling, lighting, materials, and rendered presentation.",
+          slides: ["University model", "Material study", "Lighting render", "Scene concept"],
+          prev: "Previous 3D design image",
+          next: "Next 3D design image",
+          dots: "3D design slideshow pagination",
         },
       },
     },
@@ -310,6 +321,7 @@ const translations = {
         logos: "Лога",
         "presentation-design": "Презентационен дизайн",
         "print-design": "Печатен дизайн",
+        "3d-design": "3D дизайн",
       },
       common: {
         kicker: "Избрани проекти",
@@ -362,7 +374,7 @@ const translations = {
           titleBottom: "Дизайн",
           description:
             "Структурирани слайдове, които превръщат информацията в ясна визуална история със силен ритъм, йерархия и полирани оформления.",
-          slides: ["Заглавен слайд", "Слайд с данни", "Секционен слайд", "Финален слайд"],
+          slides: ["IKEA презентация", "Rolex презентация", "Spotify презентация"],
           prev: "Предишно изображение за презентационен дизайн",
           next: "Следващо изображение за презентационен дизайн",
           dots: "Навигация на слайдшоу за презентационен дизайн",
@@ -376,6 +388,16 @@ const translations = {
           prev: "Предишно изображение за печатен дизайн",
           next: "Следващо изображение за печатен дизайн",
           dots: "Навигация на слайдшоу за печатен дизайн",
+        },
+        "3d-design": {
+          titleTop: "3D",
+          titleBottom: "Дизайн",
+          description:
+            "Различни 3D модели, създадени по време на университетски проекти в Blender, с фокус върху моделиране, осветление, материали и рендерирано представяне.",
+          slides: ["Университетски модел", "Материално проучване", "Осветление и рендер", "3D сцена"],
+          prev: "Предишно изображение за 3D дизайн",
+          next: "Следващо изображение за 3D дизайн",
+          dots: "Навигация на слайдшоу за 3D дизайн",
         },
       },
     },

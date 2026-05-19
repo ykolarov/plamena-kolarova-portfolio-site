@@ -970,6 +970,68 @@ html[data-theme="dark"] .theme-toggle {
   object-fit: cover;
 }
 
+.slider-slide.image-slide::before,
+.slider-slide.image-slide::after {
+  display: none;
+}
+
+.field-slider-banners .slider-stage,
+.field-slider-presentation .slider-stage,
+.field-slider-3d .slider-stage {
+  width: 100%;
+  min-height: 0;
+  max-height: none;
+}
+
+.field-slider-banners .slider-stage {
+  aspect-ratio: 1512 / 600;
+}
+
+.field-slider-presentation .slider-stage,
+.field-slider-3d .slider-stage {
+  aspect-ratio: 16 / 9;
+}
+
+.field-slider-banners .slider-slide img,
+.field-slider-presentation .slider-slide img,
+.field-slider-3d .slider-slide img {
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.field-slider-banners,
+.field-slider-presentation,
+.field-slider-3d {
+  width: min(calc(100% - 112px), 980px);
+  justify-self: center;
+}
+
+.field-slider-banners .slider-arrow,
+.field-slider-presentation .slider-arrow,
+.field-slider-3d .slider-arrow {
+  top: calc(50% - 36px);
+  width: 52px;
+  height: 52px;
+}
+
+.field-slider-banners .slider-arrow-prev,
+.field-slider-presentation .slider-arrow-prev,
+.field-slider-3d .slider-arrow-prev {
+  left: -70px;
+}
+
+.field-slider-banners .slider-arrow-next,
+.field-slider-presentation .slider-arrow-next,
+.field-slider-3d .slider-arrow-next {
+  right: -70px;
+}
+
+html[data-theme="dark"] .field-slider-banners .slider-slide img,
+html[data-theme="dark"] .field-slider-presentation .slider-slide img,
+html[data-theme="dark"] .field-slider-3d .slider-slide img {
+  background: #181226;
+}
+
 .slider-slide span {
   position: absolute;
   right: 24px;
@@ -1142,6 +1204,22 @@ html[data-theme="dark"] .theme-toggle {
 
 .field-slider-print .slider-slide:nth-child(4) {
   background: linear-gradient(135deg, #21133d, #a78bfa);
+}
+
+.field-slider-3d .slider-slide:nth-child(1) {
+  background: linear-gradient(135deg, #140f24, #6d42ff);
+}
+
+.field-slider-3d .slider-slide:nth-child(2) {
+  background: linear-gradient(135deg, #24163f, #a78bfa);
+}
+
+.field-slider-3d .slider-slide:nth-child(3) {
+  background: linear-gradient(135deg, #171225, #8b5cf6);
+}
+
+.field-slider-3d .slider-slide:nth-child(4) {
+  background: linear-gradient(135deg, #2a174b, #c084fc);
 }
 
 .contact {
@@ -1402,6 +1480,24 @@ html[data-theme="dark"] .form-field textarea::placeholder {
   .field-slider {
     width: 100%;
     justify-self: stretch;
+  }
+
+  .field-slider-banners,
+  .field-slider-presentation,
+  .field-slider-3d {
+    width: 100%;
+  }
+
+  .field-slider-banners .slider-arrow-prev,
+  .field-slider-presentation .slider-arrow-prev,
+  .field-slider-3d .slider-arrow-prev {
+    left: 18px;
+  }
+
+  .field-slider-banners .slider-arrow-next,
+  .field-slider-presentation .slider-arrow-next,
+  .field-slider-3d .slider-arrow-next {
+    right: 18px;
   }
 
   .field-description {
