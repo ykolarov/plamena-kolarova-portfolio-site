@@ -1104,7 +1104,7 @@ html[data-theme="dark"] .theme-toggle {
 
 .field-slider-social .slider-slide {
   transform: none;
-  transition: opacity 220ms ease;
+  transition: opacity 180ms linear;
 }
 
 .field-slider-social .slider-slide.is-active {
@@ -1155,31 +1155,63 @@ html[data-theme="dark"] .theme-toggle {
 
 .social-slider-pair .field-slider-social .slider-arrow {
   position: static;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   color: var(--accent-strong);
-  background: rgba(109, 66, 255, 0.12);
-  border-color: rgba(109, 66, 255, 0.18);
+  background: transparent;
+  border-color: transparent;
   box-shadow: none;
-  font-size: 1.35rem;
+  font-size: 1.12rem;
+  backdrop-filter: none;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
 }
 
 .social-slider-pair .field-slider-social .slider-arrow:hover {
   color: white;
-  background: rgba(109, 66, 255, 0.82);
+  background: var(--accent);
+  transform: translateY(0) scale(1.04);
+}
+
+.social-slider-pair .field-slider-social .slider-arrow:active {
+  transform: translateY(0) scale(0.92);
 }
 
 .social-slider-pair .field-slider-social .slider-footer {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 10px;
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  max-width: 100%;
+  margin: 10px auto 0;
+  padding: 5px 8px;
+  gap: 8px;
   align-items: center;
-  min-height: 38px;
-  margin-top: 8px;
+  min-height: 36px;
+  border: 1px solid rgba(109, 66, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(109, 66, 255, 0.055);
 }
 
 .social-slider-pair .field-slider-social .slider-dots {
   justify-content: center;
+  gap: 7px;
+}
+
+.social-slider-pair .field-slider-social .slider-dot {
+  width: 7px;
+  height: 7px;
+  background: rgba(109, 66, 255, 0.2);
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.social-slider-pair .field-slider-social .slider-dot.is-active {
+  width: 7px;
+  background: var(--accent);
+  transform: scale(1.45);
 }
 
 .field-slider-banners .slider-arrow,
