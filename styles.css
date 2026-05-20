@@ -271,7 +271,7 @@ html[data-theme="dark"] .theme-toggle {
   gap: 48px;
   align-items: center;
   min-height: 680px;
-  padding: clamp(28px, 5vw, 64px);
+  padding: clamp(28px, 5vw, 64px) 0;
   overflow: hidden;
 }
 
