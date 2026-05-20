@@ -258,9 +258,10 @@ html[data-theme="dark"] .theme-toggle {
   margin-top: 0;
   color: white;
   background:
-    radial-gradient(circle at 76% 18%, rgba(160, 126, 255, 0.34), transparent 22%),
-    radial-gradient(circle at 86% 78%, rgba(110, 66, 255, 0.2), transparent 26%),
-    linear-gradient(135deg, var(--hero) 0%, #17102f 48%, var(--hero-soft) 100%);
+    radial-gradient(circle at 78% 26%, rgba(190, 154, 255, 0.5), transparent 23%),
+    radial-gradient(circle at 91% 78%, rgba(126, 63, 255, 0.44), transparent 30%),
+    radial-gradient(circle at 18% 18%, rgba(73, 41, 138, 0.42), transparent 28%),
+    linear-gradient(118deg, #100a22 0%, #180d34 34%, #2d185d 68%, #4b22a0 100%);
   box-shadow: var(--shadow);
 }
 
@@ -386,7 +387,7 @@ html[data-theme="dark"] .theme-toggle {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
     linear-gradient(135deg, rgba(109, 66, 255, 0.28), rgba(32, 21, 62, 0.42));
-  box-shadow: 0 34px 90px rgba(6, 4, 16, 0.32);
+  box-shadow: none;
 }
 
 .placeholder-frame {
