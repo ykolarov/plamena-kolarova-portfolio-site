@@ -118,10 +118,11 @@ const translations = {
         "website-designs": "Website Designs",
         "website-banners": "Website Banners",
         "social-media-designs": "Social Media Designs",
-        logos: "Logos",
+        logos: "Logo",
         "presentation-design": "Presentation Design",
         "print-design": "Print Design",
         "3d-design": "3D Design",
+        miscellaneous: "Miscellaneous",
       },
       common: {
         kicker: "Featured works",
@@ -198,6 +199,16 @@ const translations = {
           prev: "Previous 3D design image",
           next: "Next 3D design image",
           dots: "3D design slideshow pagination",
+        },
+        miscellaneous: {
+          titleTop: "Miscellaneous",
+          titleBottom: "Design",
+          description:
+            "A flexible space for one-off visuals, experimental layouts, and mixed-format pieces that do not sit neatly in one category.",
+          slides: ["Mixed layout", "Campaign detail", "Visual experiment", "Extra project"],
+          prev: "Previous miscellaneous design image",
+          next: "Next miscellaneous design image",
+          dots: "Miscellaneous design slideshow pagination",
         },
       },
     },
@@ -339,10 +350,11 @@ const translations = {
         "website-designs": "Уеб дизайн",
         "website-banners": "Уеб банери",
         "social-media-designs": "Дизайн за социални мрежи",
-        logos: "Лога",
+        logos: "Лого",
         "presentation-design": "Презентационен дизайн",
         "print-design": "Печатен дизайн",
         "3d-design": "3D дизайн",
+        miscellaneous: "Разни",
       },
       common: {
         kicker: "Избрани проекти",
@@ -419,6 +431,16 @@ const translations = {
           prev: "Предишно изображение за 3D дизайн",
           next: "Следващо изображение за 3D дизайн",
           dots: "Навигация на слайдшоу за 3D дизайн",
+        },
+        miscellaneous: {
+          titleTop: "Разни",
+          titleBottom: "Дизайн",
+          description:
+            "Гъвкаво пространство за единични визии, експериментални оформления и смесени формати, които не попадат само в една категория.",
+          slides: ["Смесено оформление", "Кампаен детайл", "Визуален експеримент", "Допълнителен проект"],
+          prev: "Предишно изображение за разни дизайни",
+          next: "Следващо изображение за разни дизайни",
+          dots: "Навигация на слайдшоу за разни дизайни",
         },
       },
     },
@@ -614,9 +636,11 @@ const openImageLightbox = (image) => {
 };
 
 const setupImageViewer = () => {
-  document.querySelectorAll(".slider-slide.image-slide img").forEach((image) => {
+  document.querySelectorAll(".slider-slide.image-slide > img").forEach((image) => {
     const slide = image.closest(".slider-slide");
+    const slider = image.closest(".field-slider");
     if (!slide) return;
+    if (slider?.classList.contains("field-slider-web")) return;
 
     let button = slide.querySelector("[data-view-image]");
 
