@@ -268,10 +268,10 @@ html[data-theme="dark"] .theme-toggle {
 .hero-inner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.78fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(440px, 1fr);
+  gap: clamp(36px, 5vw, 86px);
   align-items: center;
-  min-height: 680px;
+  min-height: 740px;
   padding: clamp(28px, 5vw, 64px) 0;
   overflow: hidden;
 }
@@ -290,16 +290,39 @@ html[data-theme="dark"] .theme-toggle {
 }
 
 .hero h1 {
+  display: flex;
+  flex-direction: column;
   max-width: 680px;
   margin: 0;
-  font-size: clamp(2.2rem, 4.8vw, 4.5rem);
-  line-height: 0.98;
+  font-size: clamp(2rem, 4.4vw, 4.2rem);
+  line-height: 1;
   letter-spacing: -0.06em;
 }
 
 .hero h1 span {
-  display: block;
+  color: inherit;
+}
+
+.hero h1 .hero-hello {
+  color: white;
+  font-size: clamp(1.65rem, 3vw, 3.05rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.hero h1 .hero-name-line {
   color: #b69fff;
+  font-size: clamp(3.25rem, 6.2vw, 6.25rem);
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+}
+
+.hero h1 .hero-line {
+  display: block;
+  color: white;
+  font-size: clamp(2.15rem, 4.55vw, 4.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.065em;
 }
 
 .hero-intro {
@@ -374,63 +397,33 @@ html[data-theme="dark"] .theme-toggle {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 460px;
+  justify-content: flex-end;
+  min-height: 620px;
 }
 
-.hero-image-placeholder {
-  width: min(100%, 620px);
-  aspect-ratio: 16 / 10;
-  padding: 18px;
-  border-radius: 34px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
-    linear-gradient(135deg, rgba(109, 66, 255, 0.28), rgba(32, 21, 62, 0.42));
+.hero-image-card {
+  position: relative;
+  width: min(100%, 640px);
+  aspect-ratio: 4 / 5;
+  overflow: visible;
+  border: 0;
+  background: transparent;
   box-shadow: none;
 }
 
-.placeholder-frame {
-  display: grid;
-  place-items: center;
-  align-content: center;
-  height: 100%;
-  border-radius: 24px;
-  border: 1px dashed rgba(255, 255, 255, 0.34);
-  background:
-    radial-gradient(circle at 80% 18%, rgba(182, 159, 255, 0.34), transparent 24%),
-    radial-gradient(circle at 16% 82%, rgba(255, 255, 255, 0.16), transparent 22%),
-    rgba(255, 255, 255, 0.045);
-  text-align: center;
+.hero-image-card::before {
+  display: none;
 }
 
-.placeholder-plus {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  margin-bottom: 18px;
-  border-radius: 50%;
-  color: white;
-  background: linear-gradient(135deg, #6d42ff, #a78bfa);
-  box-shadow: 0 18px 34px rgba(109, 66, 255, 0.36);
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.placeholder-frame p {
-  margin: 0;
-  color: white;
-  font-size: clamp(1.35rem, 2vw, 2rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-}
-
-.placeholder-frame small {
+.hero-image-card img {
+  position: relative;
   display: block;
-  margin-top: 8px;
-  color: rgba(255, 255, 255, 0.66);
-  font-size: 0.92rem;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+  filter: none;
 }
 
 .device-scene {
@@ -1921,7 +1914,12 @@ html[data-theme="dark"] .lightbox-close {
   }
 
   .hero-visual {
-    min-height: 340px;
+    justify-content: center;
+    min-height: 540px;
+  }
+
+  .hero-image-card {
+    width: min(88vw, 520px);
   }
 
   .mockup-laptop {
@@ -2055,6 +2053,18 @@ html[data-theme="dark"] .lightbox-close {
     font-size: clamp(2rem, 9vw, 3rem);
   }
 
+  .hero h1 .hero-hello {
+    font-size: clamp(1.45rem, 7vw, 2.35rem);
+  }
+
+  .hero h1 .hero-name-line {
+    font-size: clamp(2.65rem, 12vw, 4rem);
+  }
+
+  .hero h1 .hero-line {
+    font-size: clamp(1.95rem, 9.8vw, 3.05rem);
+  }
+
   .hero-actions,
   .hero-meta {
     display: grid;
@@ -2069,7 +2079,11 @@ html[data-theme="dark"] .lightbox-close {
   }
 
   .hero-visual {
-    min-height: 320px;
+    min-height: 440px;
+  }
+
+  .hero-image-card {
+    width: min(92vw, 420px);
   }
 
   .device-scene {

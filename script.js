@@ -44,7 +44,8 @@ const translations = {
     brandRole: "Graphic Designer",
     hero: {
       eyebrow: "Brand, campaign & digital design",
-      title: "Graphic design that feels <span>clear, polished, and memorable.</span>",
+      title:
+        "<span class='hero-hello'>Hello,</span><span class='hero-name-line'>I’m Plamena.</span><span class='hero-line'>Creative Graphic Designer</span><span class='hero-line'>based in Bulgaria.</span>",
       intro:
         "I create visual identities, digital campaigns, web layouts, and presentation-ready assets that help ideas land with confidence.",
       primaryAction: "View selected work",
@@ -276,7 +277,8 @@ const translations = {
     brandRole: "Графичен дизайнер",
     hero: {
       eyebrow: "Бранд, кампании и дигитален дизайн",
-      title: "Графичен дизайн, който изглежда <span>ясен, изчистен и запомнящ се.</span>",
+      title:
+        "<span class='hero-hello'>Здравейте,</span><span class='hero-name-line'>аз съм Пламена.</span><span class='hero-line'>Креативен графичен дизайнер</span><span class='hero-line'>от България.</span>",
       intro:
         "Създавам визуални идентичности, дигитални кампании, уеб оформления и готови за презентация материали, които помагат на идеите да звучат уверено.",
       primaryAction: "Виж избрани проекти",
