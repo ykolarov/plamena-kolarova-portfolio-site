@@ -1,0 +1,25 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.tmp
+*.bak
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Dependency and build folders if this site ever gains tooling
+node_modules/
+dist/
+build/
+.cache/
+
+# Local IDE settings
+.vscode/
+.idea/
+
+# Logs
+*.log

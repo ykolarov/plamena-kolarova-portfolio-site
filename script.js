@@ -49,7 +49,7 @@ const translations = {
       intro:
         "I create visual identities, digital campaigns, web layouts, and presentation-ready assets that help ideas land with confidence.",
       primaryAction: "View selected work",
-      secondaryAction: "Start a conversation",
+      secondaryAction: "Contact me",
       stats: ["Years of experience", "Designs created", "Companies worked with"],
       preview: "Portfolio Preview",
       previewLine: "Design. Create. Elevate.",
@@ -234,7 +234,7 @@ const translations = {
         {
           title: "Barecare Cosmetics",
           handle: "@barecarecosmetics",
-          text: "Clean cosmetic content, campaign layouts, and product-focused feed direction.",
+          text: "Barecare Cosmetics is Bulgaria's largest distributor of Korean cosmetics. For the past three years, I have contributed continuously to the brand's Instagram content, campaign visuals, and feed direction; the examples below are selected contributions from that ongoing work.",
           cta: "Open full feed",
         },
       ],
@@ -473,28 +473,28 @@ const translations = {
       },
     },
     instagramFeeds: {
-      eyebrow: "Instagram профили на живо",
-      title: "Вижте още работа в реални бранд профили.",
+      eyebrow: "Instagram преглед",
+      title: "Barecare Cosmetics, вградено от Instagram.",
       body:
-        "Разгледайте активни Instagram профили с кампанийни визии, продуктово съдържание и социални системи отвъд избраните проекти в портфолиото.",
+        "Кратък поглед към избрани публикации от профила на Barecare, без да напускате портфолиото.",
       cards: [
         {
           title: "K-Zone Beauty",
           handle: "@kzonebeauty",
           text: "Визии за beauty и skincare кампании, продуктови лансирания и последователен feed дизайн.",
-          cta: "Отвори профила",
+          cta: "Отвори целия профил",
         },
         {
           title: "Beauty Army BG",
           handle: "@beautyarmy.bg",
           text: "Визуално съдържание за beauty продукти, промоции и брандирани серии за социални мрежи.",
-          cta: "Отвори профила",
+          cta: "Отвори целия профил",
         },
         {
           title: "Barecare Cosmetics",
           handle: "@barecarecosmetics",
-          text: "Чисто козметично съдържание, кампанийни оформления и продуктова визуална посока.",
-          cta: "Отвори профила",
+          text: "Barecare Cosmetics е най-големият дистрибутор на корейска козметика в България. През последните три години допринасям постоянно за Instagram съдържанието, кампанийния визуален език и цялостната визуална посока на бранда; примерите по-долу показват избрани мои приноси от тази продължаваща работа.",
+          cta: "Отвори целия профил",
         },
       ],
     },
@@ -675,13 +675,14 @@ const openImageLightbox = (image) => {
   if (!imageLightbox || !lightboxImage || !lightboxOriginal) return;
 
   const copy = translations[currentLanguage] || translations.en;
-  const source = image.getAttribute("src") || image.currentSrc || image.src;
+  const previewSource = image.currentSrc || image.getAttribute("src") || image.src;
+  const originalSource = image.dataset.originalSrc || previewSource;
   const title = image.alt || copy.imageViewer.title;
 
   lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-  lightboxImage.src = source;
+  lightboxImage.src = previewSource;
   lightboxImage.alt = title;
-  lightboxOriginal.href = source;
+  lightboxOriginal.href = originalSource;
   setText("[data-lightbox-title]", title);
 
   imageLightbox.hidden = false;
@@ -904,7 +905,19 @@ const updateSlider = (slider, targetIndex) => {
   const nextIndex = (targetIndex + slides.length) % slides.length;
 
   slides.forEach((slide, index) => {
-    slide.classList.toggle("is-active", index === nextIndex);
+    const isActive = index === nextIndex;
+    const focusableItems = slide.querySelectorAll("a, button, input, select, textarea, [tabindex]");
+
+    slide.classList.toggle("is-active", isActive);
+    slide.setAttribute("aria-hidden", String(!isActive));
+
+    focusableItems.forEach((item) => {
+      if (isActive) {
+        item.removeAttribute("tabindex");
+      } else {
+        item.setAttribute("tabindex", "-1");
+      }
+    });
   });
 
   dots.forEach((dot, index) => {
