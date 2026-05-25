@@ -213,6 +213,32 @@ const translations = {
         },
       },
     },
+    instagramFeeds: {
+      eyebrow: "Instagram preview",
+      title: "Barecare Cosmetics, embedded from Instagram.",
+      body:
+        "A quick look at selected live posts from Barecare's feed without leaving the portfolio.",
+      cards: [
+        {
+          title: "K-Zone Beauty",
+          handle: "@kzonebeauty",
+          text: "Beauty and skincare campaign visuals, product launches, and ongoing feed design.",
+          cta: "Open full feed",
+        },
+        {
+          title: "Beauty Army BG",
+          handle: "@beautyarmy.bg",
+          text: "Social media visuals for beauty products, promotions, and branded content series.",
+          cta: "Open full feed",
+        },
+        {
+          title: "Barecare Cosmetics",
+          handle: "@barecarecosmetics",
+          text: "Clean cosmetic content, campaign layouts, and product-focused feed direction.",
+          cta: "Open full feed",
+        },
+      ],
+    },
     contact: {
       eyebrow: "Let’s work together",
       title: "Need a designer who can move across formats without losing the brand?",
@@ -445,6 +471,32 @@ const translations = {
           dots: "Навигация на слайдшоу за разни дизайни",
         },
       },
+    },
+    instagramFeeds: {
+      eyebrow: "Instagram профили на живо",
+      title: "Вижте още работа в реални бранд профили.",
+      body:
+        "Разгледайте активни Instagram профили с кампанийни визии, продуктово съдържание и социални системи отвъд избраните проекти в портфолиото.",
+      cards: [
+        {
+          title: "K-Zone Beauty",
+          handle: "@kzonebeauty",
+          text: "Визии за beauty и skincare кампании, продуктови лансирания и последователен feed дизайн.",
+          cta: "Отвори профила",
+        },
+        {
+          title: "Beauty Army BG",
+          handle: "@beautyarmy.bg",
+          text: "Визуално съдържание за beauty продукти, промоции и брандирани серии за социални мрежи.",
+          cta: "Отвори профила",
+        },
+        {
+          title: "Barecare Cosmetics",
+          handle: "@barecarecosmetics",
+          text: "Чисто козметично съдържание, кампанийни оформления и продуктова визуална посока.",
+          cta: "Отвори профила",
+        },
+      ],
     },
     contact: {
       eyebrow: "Да работим заедно",
@@ -772,6 +824,19 @@ const applyLanguage = (language) => {
     if (label) filter.textContent = label;
   });
   updateFieldSections(copy);
+
+  if (copy.instagramFeeds) {
+    setText("#instagram-feeds .section-heading .eyebrow", copy.instagramFeeds.eyebrow);
+    setText("#instagram-feeds .section-heading h2", copy.instagramFeeds.title);
+    setText("#instagram-feeds .section-heading p:not(.eyebrow)", copy.instagramFeeds.body);
+    copy.instagramFeeds.cards.forEach((card, index) => {
+      const item = index + 1;
+      setText(`.instagram-feed-card:nth-child(${item}) h3`, card.title);
+      setText(`.instagram-feed-card:nth-child(${item}) .instagram-feed-top span:not(.instagram-mark)`, card.handle);
+      setText(`.instagram-feed-card:nth-child(${item}) > p`, card.text);
+      setText(`.instagram-feed-card:nth-child(${item}) .instagram-feed-link`, `${card.cta} <span aria-hidden="true">↗</span>`, { html: true });
+    });
+  }
 
   setText("#contact .eyebrow", copy.contact.eyebrow);
   setText("#contact h2", copy.contact.title);
