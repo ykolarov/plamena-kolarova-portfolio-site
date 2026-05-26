@@ -47,7 +47,7 @@ const translations = {
       title:
         "<span class='hero-hello'>Hello,</span><span class='hero-name-line'>I’m Plamena.</span>",
       intro:
-        "I create visual identities, digital campaigns, web layouts, and presentation-ready assets that help ideas land with confidence.",
+        "I create visual identities, digital campaigns, web layouts, email designs, print materials, and presentation designs that help brands communicate their ideas clearly and consistently.",
       primaryAction: "View selected work",
       secondaryAction: "Contact me",
       stats: ["Years of experience", "Designs created", "Companies worked with"],
@@ -64,9 +64,9 @@ const translations = {
       eyebrow: "About me",
       title: "Multidisciplinary design with a clean, modern edge.",
       intro:
-        "I’m <strong>Plamena Kolarova</strong>, a graphic designer working across brand identity, digital campaigns, website layouts, visual content, and presentation design.",
+        "I’m a graphic designer working across brand identity, digital campaigns, websites, social media content, email design, print materials, editorial layouts, packaging concepts, and presentation design.",
       body:
-        "My work balances strong concept development with careful visual execution, so each piece feels thoughtful, useful, and ready for real-world use.",
+        "I focus on creating clear, thoughtful visuals that help ideas communicate with structure, consistency, and purpose.",
       strengthsTitle: "Core strengths",
       strengths: [
         "Brand-led thinking",
@@ -306,7 +306,7 @@ const translations = {
       title:
         "<span class='hero-hello'>Здравейте,</span><span class='hero-name-line'>аз съм Пламена.</span>",
       intro:
-        "Създавам визуални идентичности, дигитални кампании, уеб оформления и готови за презентация материали, които помагат на идеите да звучат уверено.",
+        "Създавам визуални идентичности, дигитални кампании, уеб оформления, имейл дизайни, печатни материали и презентационни дизайни, които помагат на брандовете да комуникират идеите си ясно и последователно.",
       primaryAction: "Виж избрани проекти",
       secondaryAction: "Свържи се с мен",
       stats: ["Години опит", "Създадени дизайни", "Компании, с които съм работила"],
@@ -323,9 +323,9 @@ const translations = {
       eyebrow: "За мен",
       title: "Мултидисциплинарен дизайн с чист, модерен стил.",
       intro:
-        "Аз съм <strong>Пламена Коларова</strong>, графичен дизайнер, който работи с бранд идентичност, дигитални кампании, уеб оформления, визуално съдържание и презентационен дизайн.",
+        "Аз съм графичен дизайнер, който работи с бранд идентичност, дигитални кампании, уебсайтове, съдържание за социални мрежи, имейл дизайн, печатни материали, редакционни оформления, концепции за опаковки и презентационен дизайн.",
       body:
-        "Работата ми съчетава силна концепция с внимателно визуално изпълнение, така че всеки проект да бъде полезен, обмислен и готов за реална употреба.",
+        "Фокусирам се върху създаването на ясни и обмислени визуални решения, които помагат на идеите да комуникират със структура, последователност и цел.",
       strengthsTitle: "Основни силни страни",
       strengths: [
         "Мислене, водено от бранда",
@@ -785,7 +785,6 @@ const applyLanguage = (language) => {
     if (copy.nav[index]) item.textContent = copy.nav[index];
   });
 
-  setText(".hero-copy .eyebrow", copy.hero.eyebrow);
   setText(".hero-copy h1", copy.hero.title, { html: true });
   setText(".hero-intro", copy.hero.intro);
   setText(".hero-actions .button-primary", copy.hero.primaryAction);
