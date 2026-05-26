@@ -2156,6 +2156,15 @@ html[data-theme="dark"] .lightbox-close {
     text-align: center;
   }
 
+  .brand {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .brand-copy {
+    align-items: flex-start;
+  }
+
   .hero-inner,
   .about-grid {
     grid-template-columns: 1fr;
