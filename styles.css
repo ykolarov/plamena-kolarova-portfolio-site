@@ -1121,6 +1121,10 @@ html[data-theme="dark"] .theme-toggle {
   line-height: 1.65;
 }
 
+.field-section[data-field="website-designs"] .field-description {
+  max-width: 310px;
+}
+
 .field-tools {
   margin-top: auto;
   padding-top: 30px;

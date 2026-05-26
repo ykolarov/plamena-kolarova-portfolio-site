@@ -135,7 +135,7 @@ const translations = {
           titleTop: "Website",
           titleBottom: "Designs",
           description:
-            "A collection of responsive layouts and landing page concepts designed for clarity, hierarchy, and polished digital presentation.",
+            "Website layouts and landing page concepts focused on clear structure, strong visual hierarchy, and consistent brand communication across digital formats.",
           slides: ["Desktop concept", "Landing page", "Mobile screens", "UI detail"],
           prev: "Previous website design image",
           next: "Next website design image",
