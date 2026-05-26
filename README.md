@@ -10,7 +10,8 @@ The site is designed to be served directly through GitHub Pages without a build 
 - `script.js` - language switching, sliders, lightbox behavior, form mailto handling, and reveal effects
 - `assets/optimized/` - lightweight WebP preview images used by the page
 - original image folders - full-size artwork used for "open original" lightbox links
-- `favicon.svg` - browser tab icon
+- `Logos/fav_icon.png` - high-resolution favicon source
+- `favicon.ico`, `Logos/favicon-16x16.png`, `Logos/favicon-32x32.png`, `Logos/apple-touch-icon.png` - browser icon variants
 - `.nojekyll` - tells GitHub Pages to serve the static files as-is
 
 ## GitHub Pages Deployment
