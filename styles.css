@@ -2284,20 +2284,83 @@ html[data-theme="dark"] .lightbox-close {
 
   .site-header {
     position: sticky;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 14px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px 10px;
+    padding: 10px 14px 12px;
+  }
+
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .brand-copy {
+    min-width: 0;
+  }
+
+  .brand-copy strong,
+  .brand-copy small {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .site-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .site-nav a {
+    padding: 8px 12px;
   }
 
   .header-actions {
-    align-self: center;
-    flex-wrap: wrap;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    justify-content: flex-end;
+    gap: 6px;
+    min-width: max-content;
+  }
+
+  .language-toggle {
+    padding: 3px;
+  }
+
+  .language-option {
+    min-width: 38px;
+    min-height: 32px;
+    font-size: 0.78rem;
+  }
+
+  .theme-toggle {
     justify-content: center;
+    width: 40px;
+    min-height: 40px;
+    padding: 0;
+  }
+
+  .theme-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .theme-icon {
+    width: 24px;
+    height: 24px;
   }
 
   .hero {
@@ -2435,5 +2498,38 @@ html[data-theme="dark"] .lightbox-close {
   .instagram-feeds,
   .contact {
     padding-top: 76px;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header {
+    padding-inline: 10px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    font-size: 0.86rem;
+  }
+
+  .brand-copy strong {
+    font-size: 0.86rem;
+  }
+
+  .brand-copy small {
+    font-size: 0.78rem;
+  }
+
+  .language-option {
+    min-width: 34px;
+  }
+
+  .theme-toggle {
+    width: 38px;
+    min-height: 38px;
   }
 }
