@@ -1121,6 +1121,10 @@ html[data-theme="dark"] .theme-toggle {
   line-height: 1.65;
 }
 
+.field-section[data-field="website-designs"] .field-description {
+  max-width: 310px;
+}
+
 .field-tools {
   margin-top: auto;
   padding-top: 30px;
@@ -1839,10 +1843,11 @@ html[data-theme="dark"] .field-slider-misc .slider-slide > img {
   background: #dfd8ff;
 }
 
-.contact-link-linkedin img {
+.contact-links img {
   width: 24px;
   height: 24px;
   object-fit: contain;
+  flex: 0 0 24px;
 }
 
 .contact-form {
@@ -1904,6 +1909,20 @@ html[data-theme="dark"] .field-slider-misc .slider-slide > img {
   width: 100%;
   border: 0;
   cursor: pointer;
+}
+
+.contact-form .button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.form-honey {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .form-status {
@@ -2133,6 +2152,19 @@ html[data-theme="dark"] .lightbox-close {
 }
 
 @media (max-width: 980px) {
+  main {
+    text-align: center;
+  }
+
+  .brand {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .brand-copy {
+    align-items: flex-start;
+  }
+
   .hero-inner,
   .about-grid {
     grid-template-columns: 1fr;
@@ -2144,6 +2176,69 @@ html[data-theme="dark"] .lightbox-close {
 
   .hero-inner {
     min-height: auto;
+  }
+
+  .hero-copy,
+  .hero h1,
+  .hero-intro,
+  .section-heading,
+  .instagram-heading,
+  .about-copy,
+  .about-panel,
+  .tool-panel,
+  .additional-tools-panel,
+  .service-card,
+  .field-copy,
+  .field-description,
+  .field-tools,
+  .instagram-feed-card,
+  .contact-copy {
+    text-align: center;
+  }
+
+  .hero h1,
+  .hero-intro,
+  .section-heading,
+  .instagram-heading,
+  .field-copy h3,
+  .field-description,
+  .field-live-link,
+  .contact-card h2,
+  .contact-copy > p:not(.eyebrow) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions,
+  .hero-meta,
+  .tool-list,
+  .additional-tool-list,
+  .field-filters,
+  .field-tools li,
+  .field-live-link,
+  .contact-links,
+  .instagram-feed-top {
+    justify-content: center;
+  }
+
+  .check-list li {
+    padding-left: 0;
+  }
+
+  .check-list li::before {
+    position: static;
+    display: block;
+    margin: 0 auto 8px;
+  }
+
+  .service-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-content {
+    justify-items: center;
+    text-align: center;
   }
 
   .hero-visual {
@@ -2390,6 +2485,7 @@ html[data-theme="dark"] .lightbox-close {
   .hero-actions,
   .hero-meta {
     display: grid;
+    justify-items: center;
   }
 
   .hero-meta {
@@ -2442,7 +2538,7 @@ html[data-theme="dark"] .lightbox-close {
   }
 
   .service-card {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .field-section {

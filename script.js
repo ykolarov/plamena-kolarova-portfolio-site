@@ -12,6 +12,7 @@ const lightboxImage = document.querySelector("[data-lightbox-image]");
 const lightboxTitle = document.querySelector("[data-lightbox-title]");
 const lightboxOriginal = document.querySelector("[data-lightbox-original]");
 const lightboxCloseButtons = document.querySelectorAll("[data-lightbox-close]");
+const defaultContactFormEndpoint = "https://formsubmit.co/ajax/kolarovaplamena@gmail.com";
 
 const translations = {
   en: {
@@ -47,7 +48,7 @@ const translations = {
       title:
         "<span class='hero-hello'>Hello,</span><span class='hero-name-line'>I’m Plamena.</span>",
       intro:
-        "I create visual identities, digital campaigns, web layouts, and presentation-ready assets that help ideas land with confidence.",
+        "I create visual identities, digital campaigns, web layouts, email designs, print materials, and presentation designs that help brands communicate their ideas clearly and consistently.",
       primaryAction: "View selected work",
       secondaryAction: "Contact me",
       stats: ["Years of experience", "Designs created", "Companies worked with"],
@@ -62,11 +63,11 @@ const translations = {
     },
     about: {
       eyebrow: "About me",
-      title: "Multidisciplinary design with a clean, modern edge.",
+      title: "Multidisciplinary design with a clean, modern edge",
       intro:
-        "I’m <strong>Plamena Kolarova</strong>, a graphic designer working across brand identity, digital campaigns, website layouts, visual content, and presentation design.",
+        "I’m a graphic designer working across brand identity, digital campaigns, websites, social media content, email design, print materials, editorial layouts, packaging concepts, and presentation design.",
       body:
-        "My work balances strong concept development with careful visual execution, so each piece feels thoughtful, useful, and ready for real-world use.",
+        "I focus on creating clear, thoughtful visuals that help ideas communicate with structure, consistency, and purpose.",
       strengthsTitle: "Core strengths",
       strengths: [
         "Brand-led thinking",
@@ -80,7 +81,7 @@ const translations = {
     },
     services: {
       eyebrow: "Services",
-      title: "Design support across brand, digital, and presentation work.",
+      title: "What I can help with",
       cards: [
         {
           title: "Social media design",
@@ -114,7 +115,7 @@ const translations = {
     },
     work: {
       eyebrow: "Selected work",
-      title: "Explore work by field.",
+      title: "Explore work by field",
       filters: {
         "website-designs": "Website Designs",
         "website-banners": "Website Banners",
@@ -135,7 +136,7 @@ const translations = {
           titleTop: "Website",
           titleBottom: "Designs",
           description:
-            "A collection of responsive layouts and landing page concepts designed for clarity, hierarchy, and polished digital presentation.",
+            "Website layouts and landing page concepts focused on clear structure, strong visual hierarchy, and consistent brand communication across digital formats.",
           slides: ["Desktop concept", "Landing page", "Mobile screens", "UI detail"],
           prev: "Previous website design image",
           next: "Next website design image",
@@ -155,7 +156,7 @@ const translations = {
           titleTop: "Social Media",
           titleBottom: "Designs",
           description:
-            "Branded posts, story layouts, and campaign visuals designed to stay consistent while still feeling fresh across a content series.",
+            "Social media posts designed to communicate clearly, stay visually consistent, and support a polished brand presence online.",
           slides: ["Campaign post", "Story sequence", "Carousel cover", "Feed variation"],
           prev: "Previous social media design image",
           next: "Next social media design image",
@@ -165,7 +166,7 @@ const translations = {
           titleTop: "Logo",
           titleBottom: "Design",
           description:
-            "Logo concepts and identity marks built around strong shape, clear recognition, and flexible use across digital and print contexts.",
+            "Logo concepts designed with attention to clarity, proportion, and flexible use across digital and print formats.",
           slides: ["Primary mark", "Wordmark", "Monogram", "Brand lockup"],
           prev: "Previous logo design image",
           next: "Next logo design image",
@@ -215,7 +216,7 @@ const translations = {
     },
     instagramFeeds: {
       eyebrow: "Instagram preview",
-      title: "Barecare Cosmetics, embedded from Instagram.",
+      title: "Barecare Cosmetics, embedded from Instagram",
       body:
         "A quick look at selected live posts from Barecare's feed without leaving the portfolio.",
       cards: [
@@ -262,7 +263,11 @@ const translations = {
         messagePlaceholder: "Tell me what you need help with...",
         submit: "Send message",
       },
-      status: "Opening your email app with the message ready to send…",
+      status: {
+        sending: "Sending your message...",
+        success: "Message sent. I will get back to you soon.",
+        error: "Sorry, the message could not be sent. Please try again or email me directly.",
+      },
       subjectPrefix: "Portfolio enquiry from",
       bodyLabels: {
         name: "Name",
@@ -306,7 +311,7 @@ const translations = {
       title:
         "<span class='hero-hello'>Здравейте,</span><span class='hero-name-line'>аз съм Пламена.</span>",
       intro:
-        "Създавам визуални идентичности, дигитални кампании, уеб оформления и готови за презентация материали, които помагат на идеите да звучат уверено.",
+        "Създавам визуални идентичности, дигитални кампании, уеб оформления, имейл дизайни, печатни материали и презентационни дизайни, които помагат на брандовете да комуникират идеите си ясно и последователно.",
       primaryAction: "Виж избрани проекти",
       secondaryAction: "Свържи се с мен",
       stats: ["Години опит", "Създадени дизайни", "Компании, с които съм работила"],
@@ -323,9 +328,9 @@ const translations = {
       eyebrow: "За мен",
       title: "Мултидисциплинарен дизайн с чист, модерен стил.",
       intro:
-        "Аз съм <strong>Пламена Коларова</strong>, графичен дизайнер, който работи с бранд идентичност, дигитални кампании, уеб оформления, визуално съдържание и презентационен дизайн.",
+        "Аз съм графичен дизайнер, който работи с бранд идентичност, дигитални кампании, уебсайтове, съдържание за социални мрежи, имейл дизайн, печатни материали, редакционни оформления, концепции за опаковки и презентационен дизайн.",
       body:
-        "Работата ми съчетава силна концепция с внимателно визуално изпълнение, така че всеки проект да бъде полезен, обмислен и готов за реална употреба.",
+        "Фокусирам се върху създаването на ясни и обмислени визуални решения, които помагат на идеите да комуникират със структура, последователност и цел.",
       strengthsTitle: "Основни силни страни",
       strengths: [
         "Мислене, водено от бранда",
@@ -521,7 +526,11 @@ const translations = {
         messagePlaceholder: "Разкажете ми с какво имате нужда от помощ...",
         submit: "Изпрати съобщение",
       },
-      status: "Отварям имейл приложението със съобщение, готово за изпращане…",
+      status: {
+        sending: "Изпращам съобщението...",
+        success: "Съобщението е изпратено. Ще се свържа с вас скоро.",
+        error: "Съобщението не можа да бъде изпратено. Моля, опитайте отново или ми пишете директно на имейл.",
+      },
       subjectPrefix: "Запитване от портфолиото от",
       bodyLabels: {
         name: "Име",
@@ -785,7 +794,6 @@ const applyLanguage = (language) => {
     if (copy.nav[index]) item.textContent = copy.nav[index];
   });
 
-  setText(".hero-copy .eyebrow", copy.hero.eyebrow);
   setText(".hero-copy h1", copy.hero.title, { html: true });
   setText(".hero-intro", copy.hero.intro);
   setText(".hero-actions .button-primary", copy.hero.primaryAction);
@@ -865,32 +873,76 @@ themeToggle?.addEventListener("click", () => {
   applyTheme(currentTheme === "dark" ? "light" : "dark");
 });
 
-contactForm?.addEventListener("submit", (event) => {
+contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const copy = translations[currentLanguage] || translations.en;
   const data = new FormData(contactForm);
+  const honeypot = data.get("_honey")?.toString().trim() || "";
   const name = data.get("name")?.toString().trim() || "Portfolio visitor";
   const email = data.get("email")?.toString().trim() || "";
   const project = data.get("project")?.toString().trim() || copy.contact.form.options[0];
   const message = data.get("message")?.toString().trim() || "";
   const status = contactForm.querySelector("[data-form-status]");
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const endpoint = contactForm.dataset.formEndpoint || defaultContactFormEndpoint;
 
   const subject = `${copy.contact.subjectPrefix} ${name}`;
-  const body = [
-    `${copy.contact.bodyLabels.name}: ${name}`,
-    `${copy.contact.bodyLabels.email}: ${email}`,
-    `${copy.contact.bodyLabels.project}: ${project}`,
-    "",
-    `${copy.contact.bodyLabels.message}:`,
-    message,
-  ].join("\n");
 
-  if (status) {
-    status.textContent = copy.contact.status;
+  if (honeypot) {
+    contactForm.reset();
+    if (status) {
+      status.textContent = copy.contact.status.success;
+    }
+    return;
   }
 
-  window.location.href = `mailto:kolarovaplamena@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  if (status) {
+    status.textContent = copy.contact.status.sending;
+  }
+
+  contactForm.setAttribute("aria-busy", "true");
+  if (submitButton) {
+    submitButton.disabled = true;
+  }
+
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        project,
+        message,
+        _captcha: "false",
+        _template: "table",
+        _subject: subject,
+      }),
+    });
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok || result.success === false) {
+      throw new Error(result.message || "Form submission failed");
+    }
+
+    contactForm.reset();
+    if (status) {
+      status.textContent = copy.contact.status.success;
+    }
+  } catch {
+    if (status) {
+      status.textContent = copy.contact.status.error;
+    }
+  } finally {
+    contactForm.removeAttribute("aria-busy");
+    if (submitButton) {
+      submitButton.disabled = false;
+    }
+  }
 });
 
 setupImageViewer();
