@@ -237,6 +237,10 @@ a {
   object-fit: contain;
 }
 
+.theme-label {
+  white-space: nowrap;
+}
+
 html[data-theme="dark"] .site-header {
   border-bottom-color: rgba(226, 216, 255, 0.12);
   background: rgba(15, 11, 27, 0.76);

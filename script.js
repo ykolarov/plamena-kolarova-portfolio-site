@@ -28,10 +28,10 @@ const translations = {
       filters: "Portfolio categories",
     },
     theme: {
-      toDark: "Night",
-      toLight: "Light",
-      switchToDark: "Switch to night mode",
-      switchToLight: "Switch to light mode",
+      toDark: "Dark Mode",
+      toLight: "Light Mode",
+      switchToDark: "Switch to Dark Mode",
+      switchToLight: "Switch to Light Mode",
     },
     imageViewer: {
       view: "View image",
@@ -289,9 +289,9 @@ const translations = {
       filters: "Категории в портфолиото",
     },
     theme: {
-      toDark: "Нощна",
-      toLight: "Светла",
-      switchToDark: "Превключи към нощен режим",
+      toDark: "Тъмен режим",
+      toLight: "Светъл режим",
+      switchToDark: "Превключи към тъмен режим",
       switchToLight: "Превключи към светъл режим",
     },
     imageViewer: {
