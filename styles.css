@@ -1045,7 +1045,7 @@ html[data-theme="dark"] .theme-toggle {
   background: linear-gradient(135deg, var(--accent), #b35ad8);
   box-shadow: 0 14px 30px rgba(109, 66, 255, 0.2);
   font-size: 0.93rem;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.25;
 }
 
@@ -1076,7 +1076,7 @@ html[data-theme="dark"] .theme-toggle {
 .barecare-info-item h3 {
   margin: 0 0 13px;
   color: var(--hero);
-  font-size: 0.82rem;
+  font-size: 0.94rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1106,12 +1106,6 @@ html[data-theme="dark"] .theme-toggle {
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.045em;
-}
-
-.barecare-stat-grid div:last-child dt {
-  font-size: clamp(0.88rem, 1.1vw, 1.05rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .barecare-stat-grid dd {

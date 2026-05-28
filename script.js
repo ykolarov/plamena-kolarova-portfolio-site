@@ -221,7 +221,7 @@ const translations = {
       titleBottom: "Cosmetics",
       tag: "Instagram Content Campaigns & Brand Communication",
       summary:
-        "Barecare Cosmetics is a Korean cosmetics retailer in Bulgaria. I create social media content that is clean, informative and visually consistent across all campaigns and product categories.",
+        "Barecare Cosmetics is a leading Korean cosmetics retailer in Bulgaria. I create social media content that is clean, informative and visually consistent across all campaigns and product categories.",
       statsLabel: "Barecare project highlights",
       info: [
         {
