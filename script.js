@@ -63,7 +63,7 @@ const translations = {
     },
     about: {
       eyebrow: "About me",
-      title: "About <span class='section-heading-accent'>me</span>",
+      title: "Design profile",
       intro:
         "I have been working as a graphic designer for the past three years in a Bulgarian marketing agency. My work includes visual materials for social media, digital campaigns, websites, email campaigns, print materials, presentations, packaging concepts, brand identity projects, and other communication formats.",
       body:
@@ -232,7 +232,7 @@ const translations = {
         {
           title: "Barecare Cosmetics",
           handle: "@barecarecosmetics",
-          text: "Barecare Cosmetics is Bulgaria's largest distributor of Korean cosmetics. For the past three years, I have contributed continuously to the brand's Instagram content, campaign visuals, and feed direction; the examples below are selected contributions from that ongoing work.",
+          text: "Barecare Cosmetics is the largest distributor of Korean cosmetics in Bulgaria. Over the past three years, I have worked on the brand’s Instagram content, maintaining the visual structure of the feed and creating infographics, stories, campaign designs, and other supporting visual materials.",
           cta: "Open full feed",
         },
       ],
@@ -323,7 +323,7 @@ const translations = {
     },
     about: {
       eyebrow: "За мен",
-      title: "About <span class='section-heading-accent'>me</span>",
+      title: "Дизайнерски профил",
       intro:
         "Работя като графичен дизайнер от три години в българска маркетингова агенция. В работата си създавам визуални материали за социални мрежи, дигитални кампании, уебсайтове, имейл кампании, печатни материали, презентации, концепции за опаковки, проекти за бранд идентичност и други комуникационни формати.",
       body:
@@ -492,7 +492,7 @@ const translations = {
         {
           title: "Barecare Cosmetics",
           handle: "@barecarecosmetics",
-          text: "Barecare Cosmetics е най-големият дистрибутор на корейска козметика в България. През последните три години допринасям постоянно за Instagram съдържанието, кампанийния визуален език и цялостната визуална посока на бранда; примерите по-долу показват избрани мои приноси от тази продължаваща работа.",
+          text: "Barecare Cosmetics е най-големият дистрибутор на корейска козметика в България. През последните три години работя по Instagram съдържанието на бранда, като поддържам визуалната структура на профила и създавам инфографики, сторита, дизайни за кампании и други съпътстващи визуални материали.",
           cta: "Отвори целия профил",
         },
       ],
@@ -804,7 +804,8 @@ const applyLanguage = (language) => {
   setText(".floating-glass-small span", copy.hero.smallGlassKicker);
   setText(".floating-glass-small strong", copy.hero.smallGlassTitle);
 
-  setText("#about .section-heading h2", copy.about.title, { html: true });
+  setText("#about .section-heading .eyebrow", copy.about.eyebrow);
+  setText("#about .section-heading h2", copy.about.title);
   setText(".about-copy p:nth-child(1)", copy.about.intro, { html: true });
   setText(".about-copy p:nth-child(2)", copy.about.body);
   setText(".about-panel h3", copy.about.strengthsTitle);
