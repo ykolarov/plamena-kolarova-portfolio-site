@@ -49,7 +49,7 @@ const translations = {
         "<span class='hero-hello'><span class='hero-hello-text'>Hello,</span><img class='hero-wave' src='assets/wave-emoji.gif?v=20260528-restored' alt='' aria-hidden='true' width='168' height='168' /></span><span class='hero-name-line'>I’m Plamena.</span>",
       intro:
         "I create visual identities, digital campaigns, web layouts, email designs, print materials, and presentation designs that help brands communicate their ideas clearly and consistently.",
-      primaryAction: "View selected work",
+      primaryAction: "View my work",
       secondaryAction: "Contact me",
       stats: ["Years of experience", "Designs created", "Companies worked with"],
       pictureWords: ["Branding", "Digital", "Web", "3D", "Print", "Logo"],
@@ -316,7 +316,7 @@ const translations = {
         "<span class='hero-hello'><span class='hero-hello-text'>Здравейте,</span><img class='hero-wave' src='assets/wave-emoji.gif?v=20260528-restored' alt='' aria-hidden='true' width='168' height='168' /></span><span class='hero-name-line hero-name-line-bg'>казвам се Пламена.</span>",
       intro:
         "Създавам визуални идентичности, дигитални кампании, уеб оформления, имейл дизайни, печатни материали и презентационни дизайни, които помагат на брандовете да комуникират идеите си ясно и последователно.",
-      primaryAction: "Разгледай подбрани проекти",
+      primaryAction: "Разгледай проектите ми",
       secondaryAction: "Свържи се с мен",
       stats: ["Години опит", "Създадени дизайни", "Компании, с които съм работила"],
       pictureWords: ["Брандинг", "Дигитално", "Уеб", "3D", "Печат", "Лого"],
@@ -336,7 +336,7 @@ const translations = {
         "Работя като графичен дизайнер <span class='about-nowrap'>от <strong class='about-emphasis'>3 години</strong></span> в българска маркетингова агенция. В работата си създавам визуални материали за социални мрежи, дигитални кампании, уебсайтове, имейл кампании, печатни материали, презентации, концепции за опаковки, проекти за бранд идентичност и други комуникационни формати.",
       body:
         "Този опит ми помогна да изградя практичен и структуриран подход към дизайна, с фокус върху ясната визуална комуникация, последователното представяне на бранда и обмислените решения, съобразени с целите на всеки проект.",
-      strengthsTitle: "Основни силни страни",
+      strengthsTitle: "Силни страни",
       strengths: [
         "Брандово мислене",
         "Чист визуален стил",

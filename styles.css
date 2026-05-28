@@ -371,6 +371,11 @@ html[data-theme="dark"] .theme-toggle {
   margin-top: 32px;
 }
 
+.hero-actions .button {
+  width: 226px;
+  max-width: 100%;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -2605,14 +2610,27 @@ html[data-theme="dark"] .lightbox-close {
     justify-content: center;
   }
 
+  .check-list {
+    width: fit-content;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateX(18px);
+  }
+
   .check-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding-left: 0;
+    text-align: left;
   }
 
   .check-list li::before {
     position: static;
     display: block;
-    margin: 0 auto 8px;
+    flex: 0 0 10px;
+    margin: 0;
   }
 
   .service-card {
@@ -2800,6 +2818,18 @@ html[data-theme="dark"] .lightbox-close {
   .barecare-stat-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 42px;
+  }
+
+  .barecare-info-item p {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .barecare-summary {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .barecare-case-image {
