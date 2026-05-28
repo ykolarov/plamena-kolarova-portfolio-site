@@ -1018,10 +1018,29 @@ html[data-theme="dark"] .theme-toggle {
   max-width: 660px;
 }
 
+.barecare-title-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.6vw, 22px);
+  margin-top: 8px;
+}
+
+.barecare-logo {
+  display: block;
+  width: clamp(100px, 9vw, 138px);
+  height: clamp(100px, 9vw, 138px);
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #f4f2f7;
+  box-shadow: none;
+  object-fit: cover;
+}
+
 .barecare-copy h2 {
   margin: 0;
   color: var(--hero);
-  font-size: clamp(3.35rem, 7.1vw, 6.9rem);
+  font-size: clamp(2.85rem, 5.85vw, 5.75rem);
   line-height: 0.88;
   letter-spacing: -0.065em;
 }
@@ -1035,26 +1054,12 @@ html[data-theme="dark"] .theme-toggle {
   font-weight: 500;
 }
 
-.barecare-tag {
-  display: inline-flex;
-  max-width: 100%;
-  margin: 24px 0 0;
-  padding: 9px 16px;
-  border-radius: 10px;
-  color: white;
-  background: linear-gradient(135deg, var(--accent), #b35ad8);
-  box-shadow: 0 14px 30px rgba(109, 66, 255, 0.2);
-  font-size: 0.93rem;
-  font-weight: 500;
-  line-height: 1.25;
-}
-
 .barecare-summary {
   max-width: 620px;
   margin: 24px 0 0;
   color: var(--muted);
   font-size: 1.02rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.72;
 }
 
@@ -2315,8 +2320,8 @@ html[data-theme="dark"] .barecare-copy h2 span + span {
   color: #d7cdf4;
 }
 
-html[data-theme="dark"] .barecare-tag {
-  box-shadow: 0 16px 34px rgba(3, 2, 10, 0.28);
+html[data-theme="dark"] .barecare-logo {
+  background: #f7f3ff;
 }
 
 html[data-theme="dark"] .barecare-case-image {
@@ -2594,6 +2599,7 @@ html[data-theme="dark"] .lightbox-close {
   .additional-tool-list,
   .field-filters,
   .field-tools li,
+  .barecare-title-row,
   .field-live-link,
   .contact-links {
     justify-content: center;
@@ -3037,13 +3043,18 @@ html[data-theme="dark"] .lightbox-close {
     font-size: clamp(2.6rem, 14.5vw, 3.55rem);
   }
 
-  .barecare-tag {
-    justify-content: center;
-    font-size: 0.78rem;
-  }
-
   .barecare-stat-grid {
     gap: 22px 14px;
+  }
+
+  .barecare-title-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .barecare-logo {
+    width: 118px;
+    height: 118px;
   }
 
   .barecare-case-image {
