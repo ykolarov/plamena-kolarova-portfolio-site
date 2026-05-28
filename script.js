@@ -84,32 +84,32 @@ const translations = {
       title: "What I can help with",
       cards: [
         {
-          title: "Social media design",
-          text: "Posts, stories, and carousels built for consistency and impact.",
+          title: "Social Media Design",
+          text: "Posts, stories, and carousels for social media.",
         },
         {
           title: "Branding",
-          text: "Logos, visual identities, and polished brand foundations.",
+          text: "Logos and basic brand identity elements.",
         },
         {
-          title: "Website layouts",
-          text: "Landing pages and interface concepts with clear hierarchy.",
+          title: "Web Layouts",
+          text: "Landing pages and website sections with clear structure.",
         },
         {
-          title: "Email design",
-          text: "Clean branded campaigns that read beautifully on screen.",
+          title: "Email Design",
+          text: "Branded email layouts and campaign visuals.",
         },
         {
-          title: "Print materials",
-          text: "Brochures, flyers, posters, and editorial print assets.",
+          title: "Print & Branded Materials",
+          text: "Planners, notebooks, pens, and other printed materials.",
         },
         {
-          title: "Presentation design",
-          text: "Structured slides that communicate ideas with confidence.",
+          title: "Presentation Design",
+          text: "Structured slides for presentations.",
         },
         {
-          title: "Content visuals",
-          text: "Infographics, iconography, and adaptable campaign graphics.",
+          title: "Visual Content",
+          text: "Infographics, icons, and campaign visuals.",
         },
       ],
     },
@@ -239,9 +239,9 @@ const translations = {
     },
     contact: {
       eyebrow: "Let’s work together",
-      title: "Need a designer who can move across formats without losing the brand?",
+      title: "Need design support?",
       body:
-        "I’m available for graphic design, digital campaign, and portfolio-ready visual work. Send a quick message and I’ll get back to you.",
+        "Get in touch and tell me more about your project.",
       linkedin: "LinkedIn",
       form: {
         name: "Name",
@@ -255,6 +255,7 @@ const translations = {
           "Website design",
           "Social media design",
           "Print or presentation design",
+          "Other",
         ],
         message: "Message",
         messagePlaceholder: "Tell me what you need help with...",
@@ -341,35 +342,35 @@ const translations = {
     },
     services: {
       eyebrow: "Услуги",
-      title: "Дизайн подкрепа за бранд, дигитални формати и презентации",
+      title: "С какво мога да помогна",
       cards: [
         {
           title: "Дизайн за социални мрежи",
-          text: "Постове, сторита и карусели, създадени за последователност и въздействие.",
+          text: "Постове, сторита и карусели за социални мрежи.",
         },
         {
           title: "Брандинг",
-          text: "Лога, визуални идентичности и изчистени основи за разпознаваем бранд.",
+          text: "Лога и основни елементи за бранд идентичност.",
         },
         {
           title: "Уеб оформления",
-          text: "Лендинг страници и интерфейсни концепции с ясна визуална йерархия.",
+          text: "Лендинг страници и уеб секции с ясна структура.",
         },
         {
           title: "Имейл дизайн",
-          text: "Чисти брандирани кампании, които се четат красиво на екран.",
+          text: "Брандирани имейл оформления и визии за кампании.",
         },
         {
-          title: "Печатни материали",
-          text: "Брошури, флаери, постери и редакционни печатни материали.",
+          title: "Печатни и брандирани материали",
+          text: "Планери, тетрадки, химикали и други печатни материали.",
         },
         {
           title: "Презентационен дизайн",
-          text: "Структурирани слайдове, които комуникират идеи уверено.",
+          text: "Структурирани слайдове за презентации.",
         },
         {
           title: "Визуално съдържание",
-          text: "Инфографики, иконография и адаптивни кампанийни графики.",
+          text: "Инфографики, икони и визии за кампании.",
         },
       ],
     },
@@ -499,9 +500,9 @@ const translations = {
     },
     contact: {
       eyebrow: "Да работим заедно",
-      title: "Търсите дизайнер, който може да работи в различни формати, без да губи бранда?",
+      title: "Имате нужда от дизайн?",
       body:
-        "На разположение съм за графичен дизайн, дигитални кампании и визуална работа, готова за портфолио. Изпратете кратко съобщение и ще се свържа с вас.",
+        "Свържете се с мен и ми разкажете повече за проекта си.",
       linkedin: "LinkedIn",
       form: {
         name: "Име",
@@ -515,6 +516,7 @@ const translations = {
           "Уеб дизайн",
           "Дизайн за социални мрежи",
           "Печатен или презентационен дизайн",
+          "Друго",
         ],
         message: "Съобщение",
         messagePlaceholder: "Разкажете ми с какво имате нужда от помощ...",
