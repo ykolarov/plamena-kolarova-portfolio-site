@@ -308,10 +308,23 @@ html[data-theme="dark"] .theme-toggle {
 }
 
 .hero h1 .hero-hello {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.34em;
   color: white;
   font-size: clamp(1.65rem, 3vw, 3.05rem);
   line-height: 1.02;
   letter-spacing: -0.055em;
+}
+
+.hero-wave {
+  display: block;
+  width: clamp(42px, 1.45em, 78px);
+  height: clamp(42px, 1.45em, 78px);
+  flex: 0 0 auto;
+  object-fit: contain;
+  transform: translateY(-0.04em);
 }
 
 .hero h1 .hero-name-line {
@@ -2470,6 +2483,10 @@ html[data-theme="dark"] .lightbox-close {
   .contact-copy > p:not(.eyebrow) {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .hero h1 .hero-hello {
+    justify-content: center;
   }
 
   .hero-actions,
