@@ -1849,7 +1849,7 @@ html[data-theme="dark"] .field-slider-misc .slider-slide > img {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
   gap: clamp(24px, 4vw, 54px);
-  align-items: start;
+  align-items: stretch;
   padding: clamp(26px, 4vw, 42px);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
@@ -1857,6 +1857,11 @@ html[data-theme="dark"] .field-slider-misc .slider-slide > img {
     radial-gradient(circle at top right, rgba(109, 66, 255, 0.16), transparent 28%),
     white;
   box-shadow: var(--shadow);
+}
+
+.contact-copy {
+  position: relative;
+  min-height: 520px;
 }
 
 .contact-card h2 {
@@ -1905,7 +1910,105 @@ html[data-theme="dark"] .field-slider-misc .slider-slide > img {
   flex: 0 0 24px;
 }
 
+.contact-visual-element {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(420px, 84%);
+  height: 180px;
+  pointer-events: none;
+}
+
+.contact-email-orb {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  display: grid;
+  width: 128px;
+  height: 128px;
+  place-items: center;
+  border: 1px solid rgba(109, 66, 255, 0.16);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.85), transparent 36%),
+    linear-gradient(135deg, rgba(236, 232, 255, 0.96), rgba(255, 255, 255, 0.64));
+  box-shadow: 0 24px 48px rgba(21, 16, 44, 0.08);
+  transform: rotate(-5deg);
+}
+
+.contact-email-orb img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  opacity: 0.92;
+}
+
+.contact-email-card {
+  position: absolute;
+  right: 18px;
+  bottom: 46px;
+  width: 210px;
+  height: 104px;
+  border: 1px solid rgba(109, 66, 255, 0.14);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(236, 232, 255, 0.56)),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 27px,
+      rgba(109, 66, 255, 0.08) 27px 28px
+    );
+  box-shadow: 0 22px 44px rgba(21, 16, 44, 0.07);
+  transform: rotate(4deg);
+}
+
+.contact-email-card::before,
+.contact-email-card::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  border-radius: 999px;
+  background: rgba(109, 66, 255, 0.2);
+}
+
+.contact-email-card::before {
+  top: 32px;
+  width: 112px;
+  height: 12px;
+}
+
+.contact-email-card::after {
+  top: 58px;
+  width: 146px;
+  height: 10px;
+  opacity: 0.72;
+}
+
+.contact-email-dot {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), #a58cff);
+  box-shadow: 0 14px 28px rgba(109, 66, 255, 0.18);
+}
+
+.contact-email-dot-one {
+  left: 164px;
+  bottom: 120px;
+  width: 18px;
+  height: 18px;
+}
+
+.contact-email-dot-two {
+  left: 202px;
+  bottom: 88px;
+  width: 11px;
+  height: 11px;
+  opacity: 0.72;
+}
+
 .contact-form {
+  align-self: start;
   display: grid;
   gap: 14px;
   padding: 20px;
@@ -2041,6 +2144,24 @@ html[data-theme="dark"] .contact-links a {
 
 html[data-theme="dark"] .contact-links a:hover {
   background: rgba(155, 124, 255, 0.28);
+}
+
+html[data-theme="dark"] .contact-email-orb,
+html[data-theme="dark"] .contact-email-card {
+  border-color: rgba(193, 177, 255, 0.16);
+  background:
+    linear-gradient(135deg, rgba(31, 24, 51, 0.82), rgba(42, 31, 72, 0.58)),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 27px,
+      rgba(193, 177, 255, 0.07) 27px 28px
+    );
+  box-shadow: 0 22px 44px rgba(3, 2, 10, 0.24);
+}
+
+html[data-theme="dark"] .contact-email-card::before,
+html[data-theme="dark"] .contact-email-card::after {
+  background: rgba(193, 177, 255, 0.2);
 }
 
 html[data-theme="dark"] .contact-form {
@@ -2368,6 +2489,14 @@ html[data-theme="dark"] .lightbox-close {
 
   .contact-card {
     grid-template-columns: 1fr;
+  }
+
+  .contact-copy {
+    min-height: auto;
+  }
+
+  .contact-visual-element {
+    display: none;
   }
 
   .field-slider {
