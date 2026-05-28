@@ -46,12 +46,13 @@ const translations = {
     hero: {
       eyebrow: "Brand, campaign & digital design",
       title:
-        "<span class='hero-hello'><span class='hero-hello-text'>Hello,</span><img class='hero-wave' src='assets/wave-emoji.gif?v=20260528-transparent' alt='' aria-hidden='true' width='168' height='168' /></span><span class='hero-name-line'>I’m Plamena.</span>",
+        "<span class='hero-hello'><span class='hero-hello-text'>Hello,</span><img class='hero-wave' src='assets/wave-emoji.gif?v=20260528-restored' alt='' aria-hidden='true' width='168' height='168' /></span><span class='hero-name-line'>I’m Plamena.</span>",
       intro:
         "I create visual identities, digital campaigns, web layouts, email designs, print materials, and presentation designs that help brands communicate their ideas clearly and consistently.",
       primaryAction: "View selected work",
       secondaryAction: "Contact me",
       stats: ["Years of experience", "Designs created", "Companies worked with"],
+      pictureWords: ["Branding", "Digital", "Web", "3D", "Print", "Logo"],
       preview: "Portfolio Preview",
       previewLine: "Design. Create. Elevate.",
       phoneTop: "Web",
@@ -307,12 +308,13 @@ const translations = {
     hero: {
       eyebrow: "Бранд, кампании и дигитален дизайн",
       title:
-        "<span class='hero-hello'><span class='hero-hello-text'>Здравейте,</span><img class='hero-wave' src='assets/wave-emoji.gif?v=20260528-transparent' alt='' aria-hidden='true' width='168' height='168' /></span><span class='hero-name-line hero-name-line-bg'>казвам се Пламена.</span>",
+        "<span class='hero-hello'><span class='hero-hello-text'>Здравейте,</span><img class='hero-wave' src='assets/wave-emoji.gif?v=20260528-restored' alt='' aria-hidden='true' width='168' height='168' /></span><span class='hero-name-line hero-name-line-bg'>казвам се Пламена.</span>",
       intro:
         "Създавам визуални идентичности, дигитални кампании, уеб оформления, имейл дизайни, печатни материали и презентационни дизайни, които помагат на брандовете да комуникират идеите си ясно и последователно.",
       primaryAction: "Разгледай подбрани проекти",
       secondaryAction: "Свържи се с мен",
       stats: ["Години опит", "Създадени дизайни", "Компании, с които съм работила"],
+      pictureWords: ["Брандинг", "Дигитално", "Уеб", "3D", "Печат", "Лого"],
       preview: "Преглед на портфолио",
       previewLine: "Дизайн. Идея. Впечатление.",
       phoneTop: "Уеб",
@@ -807,6 +809,9 @@ const applyLanguage = (language) => {
   setText(".hero-actions .button-ghost", copy.hero.secondaryAction);
   copy.hero.stats.forEach((stat, index) => {
     setText(`.hero-meta li:nth-child(${index + 1}) span`, stat);
+  });
+  copy.hero.pictureWords.forEach((word, index) => {
+    setText(`.hero-picture-words span:nth-child(${index + 1})`, word);
   });
   setText(".mockup-screen-content p", copy.hero.preview);
   setText(".mockup-screen-content strong", copy.hero.previewLine);
