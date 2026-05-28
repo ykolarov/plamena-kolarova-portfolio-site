@@ -731,6 +731,17 @@ const setupImageViewer = () => {
   });
 };
 
+const setupBannerBackdrops = () => {
+  document.querySelectorAll(".field-slider-banners .slider-slide.image-slide > img").forEach((image) => {
+    const slide = image.closest(".slider-slide");
+    const source = image.currentSrc || image.getAttribute("src") || image.src;
+
+    if (slide && source) {
+      slide.style.setProperty("--slide-backdrop", `url("${source.split("?")[0]}")`);
+    }
+  });
+};
+
 const renderFooter = (copy) => {
   const footerText = document.querySelector(".site-footer p");
   if (!footerText) return;
@@ -939,6 +950,7 @@ contactForm?.addEventListener("submit", async (event) => {
   }
 });
 
+setupBannerBackdrops();
 setupImageViewer();
 applyLanguage(currentLanguage);
 
