@@ -12,6 +12,7 @@ const lightboxImage = document.querySelector("[data-lightbox-image]");
 const lightboxTitle = document.querySelector("[data-lightbox-title]");
 const lightboxOriginal = document.querySelector("[data-lightbox-original]");
 const lightboxCloseButtons = document.querySelectorAll("[data-lightbox-close]");
+const instagramSection = document.querySelector("#instagram-feeds");
 const defaultContactFormEndpoint = "https://formsubmit.co/ajax/kolarovaplamena@gmail.com";
 
 const translations = {
@@ -566,8 +567,10 @@ const setText = (selector, value, { html = false, all = false } = {}) => {
   elements.forEach((element) => {
     if (!element) return;
     if (html) {
-      element.innerHTML = value;
-    } else {
+      if (element.innerHTML !== value) {
+        element.innerHTML = value;
+      }
+    } else if (element.textContent !== value) {
       element.textContent = value;
     }
   });
@@ -577,8 +580,19 @@ const setAttribute = (selector, attribute, value, { all = false } = {}) => {
   const elements = all ? document.querySelectorAll(selector) : [document.querySelector(selector)];
 
   elements.forEach((element) => {
-    element?.setAttribute(attribute, value);
+    if (element?.getAttribute(attribute) !== value) {
+      element?.setAttribute(attribute, value);
+    }
   });
+};
+
+const runWhenIdle = (callback, timeout = 1600) => {
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(callback, { timeout });
+    return;
+  }
+
+  window.setTimeout(callback, Math.min(timeout, 700));
 };
 
 const updateServices = (copy) => {
@@ -682,7 +696,7 @@ const openImageLightbox = (image) => {
   if (!imageLightbox || !lightboxImage || !lightboxOriginal) return;
 
   const copy = translations[currentLanguage] || translations.en;
-  const previewSource = image.currentSrc || image.getAttribute("src") || image.src;
+  const previewSource = image.currentSrc || image.getAttribute("src") || image.dataset.src || image.src;
   const originalSource = image.dataset.originalSrc || previewSource;
   const title = image.alt || copy.imageViewer.title;
 
@@ -733,15 +747,65 @@ const setupImageViewer = () => {
   });
 };
 
-const setupBannerBackdrops = () => {
-  document.querySelectorAll(".field-slider-banners .slider-slide.image-slide > img").forEach((image) => {
-    const slide = image.closest(".slider-slide");
-    const source = image.currentSrc || image.getAttribute("src") || image.src;
+const isSliderVisible = (slider) => {
+  const fieldSection = slider.closest(".field-section");
+  return !fieldSection || !fieldSection.hidden;
+};
 
-    if (slide && source) {
-      slide.style.setProperty("--slide-backdrop", `url("${source.split("?")[0]}")`);
-    }
+const getImageSource = (image) =>
+  image?.currentSrc || image?.getAttribute("src") || image?.dataset.src || image?.src || "";
+
+const setBannerBackdrop = (slide) => {
+  if (!slide?.matches(".field-slider-banners .slider-slide.image-slide")) return;
+
+  const image = slide.querySelector(":scope > img");
+  const source = getImageSource(image);
+
+  if (source) {
+    slide.style.setProperty("--slide-backdrop", `url("${source.split("?")[0]}")`);
+  }
+};
+
+const loadSlideMedia = (slide) => {
+  if (!slide) return;
+
+  slide.querySelectorAll("img[data-src]").forEach((image) => {
+    const source = image.dataset.src;
+    if (!source) return;
+
+    image.src = source;
+    image.removeAttribute("data-src");
   });
+
+  const image = slide.querySelector(":scope > img");
+  if (image?.complete) {
+    setBannerBackdrop(slide);
+  } else {
+    image?.addEventListener("load", () => setBannerBackdrop(slide), { once: true });
+  }
+};
+
+const primeSliderMedia = (slider, activeIndex) => {
+  if (!isSliderVisible(slider)) return;
+
+  const slides = Array.from(slider.querySelectorAll(".slider-slide"));
+  if (!slides.length) return;
+
+  loadSlideMedia(slides[activeIndex]);
+
+  runWhenIdle(() => {
+    const nextIndex = (activeIndex + 1) % slides.length;
+    const previousIndex = (activeIndex - 1 + slides.length) % slides.length;
+
+    loadSlideMedia(slides[nextIndex]);
+    if (previousIndex !== nextIndex) {
+      loadSlideMedia(slides[previousIndex]);
+    }
+  }, 1200);
+};
+
+const setupBannerBackdrops = () => {
+  document.querySelectorAll(".field-slider-banners .slider-slide.is-active").forEach(setBannerBackdrop);
 };
 
 const renderFooter = (copy) => {
@@ -991,6 +1055,7 @@ const updateSlider = (slider, targetIndex) => {
 
   slider.dataset.activeSlide = String(nextIndex);
   slider.dataset.activeRatio = slides[nextIndex].dataset.slideRatio || "default";
+  primeSliderMedia(slider, nextIndex);
 };
 
 sliders.forEach((slider) => {
@@ -1045,10 +1110,56 @@ fieldFilters.forEach((filter) => {
 
       if (isActive) {
         section.classList.add("is-visible");
+        section.querySelectorAll("[data-slider]").forEach((slider) => {
+          updateSlider(slider, Number(slider.dataset.activeSlide || 0));
+        });
       }
     });
   });
 });
+
+const setupInstagramEmbeds = () => {
+  if (!instagramSection) return;
+
+  let hasRequestedEmbed = false;
+  const loadEmbeds = () => {
+    if (hasRequestedEmbed) return;
+
+    hasRequestedEmbed = true;
+
+    if (window.instgrm?.Embeds?.process) {
+      window.instgrm.Embeds.process();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.instagram.com/embed.js";
+    document.body.appendChild(script);
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    runWhenIdle(loadEmbeds, 2400);
+    return;
+  }
+
+  const instagramObserver = new IntersectionObserver(
+    (entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+
+      instagramObserver.disconnect();
+      runWhenIdle(loadEmbeds, 1800);
+    },
+    {
+      rootMargin: "700px 0px",
+      threshold: 0.01,
+    },
+  );
+
+  instagramObserver.observe(instagramSection);
+};
+
+setupInstagramEmbeds();
 
 const observer = new IntersectionObserver(
   (entries) => {

@@ -72,6 +72,15 @@ a {
   margin: 0 auto;
 }
 
+.about,
+.work,
+.instagram-feeds,
+.services,
+.contact {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 760px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -1228,6 +1237,8 @@ html[data-theme="dark"] .theme-toggle {
   grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
   gap: clamp(28px, 4vw, 52px);
   align-items: center;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 560px;
   min-width: 0;
   min-height: 500px;
   padding: clamp(22px, 3vw, 30px);
@@ -1514,6 +1525,11 @@ html[data-theme="dark"] .theme-toggle {
   width: 230px;
   height: 230px;
   background: rgba(255, 255, 255, 0.15);
+}
+
+.slider-slide:not(.is-active)::before,
+.slider-slide:not(.is-active)::after {
+  display: none;
 }
 
 .slider-slide img {
