@@ -63,11 +63,11 @@ const translations = {
     },
     about: {
       eyebrow: "About me",
-      title: "Multidisciplinary design with a clean, modern edge",
+      title: "About <span class='section-heading-accent'>me</span>",
       intro:
-        "I’m a graphic designer working across brand identity, digital campaigns, websites, social media content, email design, print materials, editorial layouts, packaging concepts, and presentation design.",
+        "I have been working as a graphic designer for the past three years in a Bulgarian marketing agency. My work includes visual materials for social media, digital campaigns, websites, email campaigns, print materials, presentations, packaging concepts, brand identity projects, and other communication formats.",
       body:
-        "I focus on creating clear, thoughtful visuals that help ideas communicate with structure, consistency, and purpose.",
+        "This experience has helped me develop a practical and structured approach to design, with a focus on clear visual communication, consistent brand presentation, and thoughtful solutions tailored to each project.",
       strengthsTitle: "Core strengths",
       strengths: [
         "Brand-led thinking",
@@ -136,7 +136,7 @@ const translations = {
           titleTop: "Website",
           titleBottom: "Designs",
           description:
-            "Website layouts and landing page concepts focused on clear structure, strong visual hierarchy, and consistent brand communication across digital formats.",
+            "Website layouts and landing page concepts developed with a clear structure, easy navigation, and a carefully built visual hierarchy.",
           slides: ["Desktop concept", "Landing page", "Mobile screens", "UI detail"],
           prev: "Previous website design image",
           next: "Next website design image",
@@ -146,7 +146,7 @@ const translations = {
           titleTop: "Website",
           titleBottom: "Banners",
           description:
-            "Campaign graphics adapted for different web formats, with emphasis on strong visual hierarchy and consistent brand treatment.",
+            "Website banners designed for different web formats, with careful attention to visual hierarchy, clarity, and brand\u00a0alignment.",
           slides: ["Hero banner", "Leaderboard", "Social crop", "Campaign variation"],
           prev: "Previous website banner image",
           next: "Next website banner image",
@@ -176,7 +176,7 @@ const translations = {
           titleTop: "Presentation",
           titleBottom: "Design",
           description:
-            "Structured slides that turn information into a clear visual story, with strong pacing, hierarchy, and polished layouts.",
+            "Structured presentation slides designed to present information clearly, with a balanced visual flow, clear hierarchy, and polished layouts.",
           slides: ["IKEA presentation", "Rolex presentation", "Spotify presentation"],
           prev: "Previous presentation design image",
           next: "Next presentation design image",
@@ -186,7 +186,7 @@ const translations = {
           titleTop: "Print",
           titleBottom: "Design",
           description:
-            "Posters, brochures, and editorial layouts developed with careful typography, balanced spacing, and print-ready composition.",
+            "Planners, notebooks, and branded pens designed with attention to visual consistency, detail, and a polished final presentation.",
           slides: ["Poster", "Brochure spread", "Flyer", "Editorial detail"],
           prev: "Previous print design image",
           next: "Next print design image",
@@ -196,7 +196,7 @@ const translations = {
           titleTop: "3D",
           titleBottom: "Design",
           description:
-            "Various 3D models created during university projects, developed in Blender with a focus on modelling, lighting, materials, and rendered presentation.",
+            "3D models created during my 3D Modelling course at university, with a focus on modelling, lighting, materials, and final rendered presentation.",
           slides: ["University model", "Material study", "Lighting render", "Scene concept"],
           prev: "Previous 3D design image",
           next: "Next 3D design image",
@@ -206,7 +206,7 @@ const translations = {
           titleTop: "Miscellaneous",
           titleBottom: "Design",
           description:
-            "A flexible space for one-off visuals, experimental layouts, and mixed-format pieces that do not sit neatly in one category.",
+            "Additional visual work created for different formats and purposes.",
           slides: ["Mixed layout", "Campaign detail", "Visual experiment", "Extra project"],
           prev: "Previous miscellaneous design image",
           next: "Next miscellaneous design image",
@@ -215,10 +215,7 @@ const translations = {
       },
     },
     instagramFeeds: {
-      eyebrow: "Instagram preview",
-      title: "Barecare Cosmetics, embedded from Instagram",
-      body:
-        "A quick look at selected live posts from Barecare's feed without leaving the portfolio.",
+      eyebrow: "Instagram profile",
       cards: [
         {
           title: "K-Zone Beauty",
@@ -309,7 +306,7 @@ const translations = {
     hero: {
       eyebrow: "Бранд, кампании и дигитален дизайн",
       title:
-        "<span class='hero-hello'>Здравейте,</span><span class='hero-name-line'>аз съм Пламена.</span>",
+        "<span class='hero-hello'>Здравейте,</span><span class='hero-name-line hero-name-line-bg'>казвам се Пламена.</span>",
       intro:
         "Създавам визуални идентичности, дигитални кампании, уеб оформления, имейл дизайни, печатни материали и презентационни дизайни, които помагат на брандовете да комуникират идеите си ясно и последователно.",
       primaryAction: "Виж избрани проекти",
@@ -326,15 +323,15 @@ const translations = {
     },
     about: {
       eyebrow: "За мен",
-      title: "Мултидисциплинарен дизайн с чист, модерен стил.",
+      title: "About <span class='section-heading-accent'>me</span>",
       intro:
-        "Аз съм графичен дизайнер, който работи с бранд идентичност, дигитални кампании, уебсайтове, съдържание за социални мрежи, имейл дизайн, печатни материали, редакционни оформления, концепции за опаковки и презентационен дизайн.",
+        "Работя като графичен дизайнер от три години в българска маркетингова агенция. В работата си създавам визуални материали за социални мрежи, дигитални кампании, уебсайтове, имейл кампании, печатни материали, презентации, концепции за опаковки, проекти за бранд идентичност и други комуникационни формати.",
       body:
-        "Фокусирам се върху създаването на ясни и обмислени визуални решения, които помагат на идеите да комуникират със структура, последователност и цел.",
+        "Този опит ми помогна да изградя практичен и структуриран подход към дизайна, с фокус върху ясната визуална комуникация, последователното представяне на бранда и обмислените решения, съобразени с целите на всеки проект.",
       strengthsTitle: "Основни силни страни",
       strengths: [
-        "Мислене, водено от бранда",
-        "Чисти визуални системи",
+        "Брандово мислене",
+        "Чист визуален стил",
         "Прецизно изпълнение",
         "Адаптивност към дигитални формати",
       ],
@@ -344,7 +341,7 @@ const translations = {
     },
     services: {
       eyebrow: "Услуги",
-      title: "Дизайн подкрепа за бранд, дигитални формати и презентации.",
+      title: "Дизайн подкрепа за бранд, дигитални формати и презентации",
       cards: [
         {
           title: "Дизайн за социални мрежи",
@@ -378,7 +375,7 @@ const translations = {
     },
     work: {
       eyebrow: "Избрани проекти",
-      title: "Разгледай проектите по сфера.",
+      title: "Разгледай проектите по сфера",
       filters: {
         "website-designs": "Уеб дизайн",
         "website-banners": "Уеб банери",
@@ -387,7 +384,7 @@ const translations = {
         "presentation-design": "Презентационен дизайн",
         "print-design": "Печатен дизайн",
         "3d-design": "3D дизайн",
-        miscellaneous: "Разни",
+        miscellaneous: "Допълнителни проекти",
       },
       common: {
         kicker: "Избрани проекти",
@@ -399,7 +396,7 @@ const translations = {
           titleTop: "Уеб",
           titleBottom: "Дизайн",
           description:
-            "Колекция от responsive оформления и концепции за лендинг страници, създадени с яснота, йерархия и полирано дигитално представяне.",
+            "Уеб оформления и концепции за лендинг страници, разработени с ясна структура, лесна навигация и внимателно изградена визуална йерархия.",
           slides: ["Десктоп концепция", "Лендинг страница", "Мобилни екрани", "UI детайл"],
           prev: "Предишно изображение за уеб дизайн",
           next: "Следващо изображение за уеб дизайн",
@@ -409,7 +406,7 @@ const translations = {
           titleTop: "Уеб",
           titleBottom: "Банери",
           description:
-            "Кампанийни графики, адаптирани за различни уеб формати, с фокус върху силна визуална йерархия и последователно бранд присъствие.",
+            "Уеб банери, адаптирани за различни дигитални формати, с фокус върху ясна визуална йерархия, четимост и съответствие с бранд идентичността.",
           slides: ["Hero банер", "Leaderboard банер", "Социален формат", "Вариация на кампания"],
           prev: "Предишно изображение за уеб банер",
           next: "Следващо изображение за уеб банер",
@@ -419,7 +416,7 @@ const translations = {
           titleTop: "Социални мрежи",
           titleBottom: "Дизайни",
           description:
-            "Брандирани постове, сторита и кампанийни визии, проектирани да бъдат последователни и свежи в серия от съдържание.",
+            "Публикации за социални мрежи, създадени с фокус върху ясната комуникация, визуалната последователност и изграждането на добре оформено бранд присъствие онлайн.",
           slides: ["Кампаниен пост", "Серия сторита", "Корица за карусел", "Вариация за feed"],
           prev: "Предишно изображение за социални мрежи",
           next: "Следващо изображение за социални мрежи",
@@ -439,7 +436,7 @@ const translations = {
           titleTop: "Презентационен",
           titleBottom: "Дизайн",
           description:
-            "Структурирани слайдове, които превръщат информацията в ясна визуална история със силен ритъм, йерархия и полирани оформления.",
+            "Презентационни слайдове, структурирани така, че да представят информацията ясно, с балансиран визуален ритъм, ясна йерархия и прецизно оформени страници.",
           slides: ["IKEA презентация", "Rolex презентация", "Spotify презентация"],
           prev: "Предишно изображение за презентационен дизайн",
           next: "Следващо изображение за презентационен дизайн",
@@ -449,7 +446,7 @@ const translations = {
           titleTop: "Печатен",
           titleBottom: "Дизайн",
           description:
-            "Постери, брошури и редакционни оформления, разработени с внимателна типография, балансирано пространство и композиция, готова за печат.",
+            "Планери, тетрадки и брандирани химикали, създадени с внимание към визуалната последователност, детайла и прецизното финално оформление.",
           slides: ["Постер", "Брошура", "Флаер", "Редакционен детайл"],
           prev: "Предишно изображение за печатен дизайн",
           next: "Следващо изображение за печатен дизайн",
@@ -459,29 +456,26 @@ const translations = {
           titleTop: "3D",
           titleBottom: "Дизайн",
           description:
-            "Различни 3D модели, създадени по време на университетски проекти в Blender, с фокус върху моделиране, осветление, материали и рендерирано представяне.",
+            "3D модели, създадени по време на университетската ми дисциплина „3D моделиране“, с фокус върху моделиране, осветление, материали и финално рендерирано представяне.",
           slides: ["Университетски модел", "Материално проучване", "Осветление и рендер", "3D сцена"],
           prev: "Предишно изображение за 3D дизайн",
           next: "Следващо изображение за 3D дизайн",
           dots: "Навигация на слайдшоу за 3D дизайн",
         },
         miscellaneous: {
-          titleTop: "Разни",
-          titleBottom: "Дизайн",
+          titleTop: "Допълнителни",
+          titleBottom: "Проекти",
           description:
-            "Гъвкаво пространство за единични визии, експериментални оформления и смесени формати, които не попадат само в една категория.",
+            "Допълнителни визуални разработки, създадени за различни формати и цели.",
           slides: ["Смесено оформление", "Кампаен детайл", "Визуален експеримент", "Допълнителен проект"],
-          prev: "Предишно изображение за разни дизайни",
-          next: "Следващо изображение за разни дизайни",
-          dots: "Навигация на слайдшоу за разни дизайни",
+          prev: "Предишно изображение за допълнителни проекти",
+          next: "Следващо изображение за допълнителни проекти",
+          dots: "Навигация на слайдшоу за допълнителни проекти",
         },
       },
     },
     instagramFeeds: {
-      eyebrow: "Instagram преглед",
-      title: "Barecare Cosmetics, вградено от Instagram.",
-      body:
-        "Кратък поглед към избрани публикации от профила на Barecare, без да напускате портфолиото.",
+      eyebrow: "Instagram профил",
       cards: [
         {
           title: "K-Zone Beauty",
@@ -810,8 +804,7 @@ const applyLanguage = (language) => {
   setText(".floating-glass-small span", copy.hero.smallGlassKicker);
   setText(".floating-glass-small strong", copy.hero.smallGlassTitle);
 
-  setText("#about .section-heading .eyebrow", copy.about.eyebrow);
-  setText("#about .section-heading h2", copy.about.title);
+  setText("#about .section-heading h2", copy.about.title, { html: true });
   setText(".about-copy p:nth-child(1)", copy.about.intro, { html: true });
   setText(".about-copy p:nth-child(2)", copy.about.body);
   setText(".about-panel h3", copy.about.strengthsTitle);
@@ -835,9 +828,7 @@ const applyLanguage = (language) => {
   updateFieldSections(copy);
 
   if (copy.instagramFeeds) {
-    setText("#instagram-feeds .section-heading .eyebrow", copy.instagramFeeds.eyebrow);
-    setText("#instagram-feeds .section-heading h2", copy.instagramFeeds.title);
-    setText("#instagram-feeds .section-heading p:not(.eyebrow)", copy.instagramFeeds.body);
+    setText("#instagram-feeds .instagram-profile-eyebrow", copy.instagramFeeds.eyebrow);
     copy.instagramFeeds.cards.forEach((card, index) => {
       const item = index + 1;
       setText(`.instagram-feed-card:nth-child(${item}) h3`, card.title);

@@ -317,6 +317,12 @@ html[data-theme="dark"] .theme-toggle {
   letter-spacing: -0.075em;
 }
 
+.hero h1 .hero-name-line-bg {
+  font-size: 4.45rem;
+  line-height: 0.94;
+  white-space: nowrap;
+}
+
 .hero h1 .hero-line {
   display: block;
   color: white;
@@ -646,6 +652,10 @@ html[data-theme="dark"] .theme-toggle {
   letter-spacing: -0.045em;
 }
 
+.section-heading-accent {
+  color: var(--accent);
+}
+
 .about,
 .services,
 .work,
@@ -837,15 +847,8 @@ html[data-theme="dark"] .theme-toggle {
   padding-top: 74px;
 }
 
-.instagram-heading {
-  max-width: 760px;
-}
-
-.instagram-heading p:not(.eyebrow) {
-  margin: 16px 0 0;
-  color: var(--muted);
-  font-size: 1.02rem;
-  line-height: 1.7;
+.instagram-profile-eyebrow {
+  margin-bottom: 28px;
 }
 
 .instagram-feed-grid {
@@ -1079,6 +1082,30 @@ html[data-theme="dark"] .theme-toggle {
   box-shadow: 0 18px 42px rgba(21, 16, 44, 0.06);
 }
 
+.field-section[data-field="social-media-designs"] {
+  grid-template-columns: minmax(320px, 0.52fr) minmax(0, 1fr);
+}
+
+.field-section[data-field="logos"] {
+  grid-template-columns: minmax(320px, 0.52fr) minmax(0, 1fr);
+}
+
+.field-section[data-field="presentation-design"] {
+  grid-template-columns: minmax(320px, 0.52fr) minmax(0, 1fr);
+}
+
+.field-section[data-field="print-design"] {
+  grid-template-columns: minmax(320px, 0.52fr) minmax(0, 1fr);
+}
+
+.field-section[data-field="3d-design"] {
+  grid-template-columns: minmax(320px, 0.52fr) minmax(0, 1fr);
+}
+
+.field-section[data-field="miscellaneous"] {
+  grid-template-columns: minmax(320px, 0.52fr) minmax(0, 1fr);
+}
+
 .field-copy {
   position: relative;
   display: flex;
@@ -1122,12 +1149,40 @@ html[data-theme="dark"] .theme-toggle {
 }
 
 .field-section[data-field="website-designs"] .field-description {
-  max-width: 310px;
+  max-width: 390px;
+}
+
+.field-section[data-field="website-banners"] .field-description {
+  max-width: 320px;
+}
+
+.field-section[data-field="social-media-designs"] .field-description {
+  max-width: 420px;
+}
+
+.field-section[data-field="logos"] .field-description {
+  max-width: 420px;
+}
+
+.field-section[data-field="presentation-design"] .field-description {
+  max-width: 420px;
+}
+
+.field-section[data-field="print-design"] .field-description {
+  max-width: 420px;
+}
+
+.field-section[data-field="3d-design"] .field-description {
+  max-width: 420px;
+}
+
+.field-section[data-field="miscellaneous"] .field-description {
+  max-width: 420px;
 }
 
 .field-tools {
-  margin-top: auto;
-  padding-top: 30px;
+  margin-top: clamp(32px, 3.6vw, 48px);
+  padding-top: 0;
 }
 
 .field-tools > span {
@@ -2182,7 +2237,6 @@ html[data-theme="dark"] .lightbox-close {
   .hero h1,
   .hero-intro,
   .section-heading,
-  .instagram-heading,
   .about-copy,
   .about-panel,
   .tool-panel,
@@ -2199,7 +2253,6 @@ html[data-theme="dark"] .lightbox-close {
   .hero h1,
   .hero-intro,
   .section-heading,
-  .instagram-heading,
   .field-copy h3,
   .field-description,
   .field-live-link,
@@ -2287,6 +2340,30 @@ html[data-theme="dark"] .lightbox-close {
   .field-section {
     grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+  .field-section[data-field="social-media-designs"] {
+    grid-template-columns: 1fr;
+  }
+
+  .field-section[data-field="logos"] {
+    grid-template-columns: 1fr;
+  }
+
+  .field-section[data-field="presentation-design"] {
+    grid-template-columns: 1fr;
+  }
+
+  .field-section[data-field="print-design"] {
+    grid-template-columns: 1fr;
+  }
+
+  .field-section[data-field="3d-design"] {
+    grid-template-columns: 1fr;
+  }
+
+  .field-section[data-field="miscellaneous"] {
+    grid-template-columns: 1fr;
   }
 
   .contact-card {
@@ -2478,6 +2555,10 @@ html[data-theme="dark"] .lightbox-close {
     font-size: clamp(2.65rem, 12vw, 4rem);
   }
 
+  .hero h1 .hero-name-line-bg {
+    font-size: 3rem;
+  }
+
   .hero h1 .hero-line {
     font-size: clamp(1.95rem, 9.8vw, 3.05rem);
   }
@@ -2597,6 +2678,12 @@ html[data-theme="dark"] .lightbox-close {
   }
 }
 
+@media (max-width: 480px) {
+  .hero h1 .hero-name-line-bg {
+    font-size: 2.45rem;
+  }
+}
+
 @media (max-width: 380px) {
   .site-header {
     padding-inline: 10px;
@@ -2627,5 +2714,9 @@ html[data-theme="dark"] .lightbox-close {
   .theme-toggle {
     width: 38px;
     min-height: 38px;
+  }
+
+  .hero h1 .hero-name-line-bg {
+    font-size: 2rem;
   }
 }
