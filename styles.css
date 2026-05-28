@@ -688,6 +688,15 @@ html[data-theme="dark"] .theme-toggle {
   padding: 26px;
 }
 
+.about-emphasis {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.about-nowrap {
+  white-space: nowrap;
+}
+
 .about-copy p {
   margin: 0;
   color: var(--muted);

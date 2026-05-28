@@ -65,7 +65,7 @@ const translations = {
       eyebrow: "About me",
       title: "Design profile",
       intro:
-        "I have been working as a graphic designer for the past three years in a Bulgarian marketing agency. My work includes visual materials for social media, digital campaigns, websites, email campaigns, print materials, presentations, packaging concepts, brand identity projects, and other communication formats.",
+        "I have been working as a graphic designer for the <span class='about-nowrap'>past <strong class='about-emphasis'>3 years</strong></span> in a Bulgarian marketing agency. My work includes visual materials for social media, digital campaigns, websites, email campaigns, print materials, presentations, packaging concepts, brand identity projects, and other communication formats.",
       body:
         "This experience has helped me develop a practical and structured approach to design, with a focus on clear visual communication, consistent brand presentation, and thoughtful solutions tailored to each project.",
       strengthsTitle: "Core strengths",
@@ -310,7 +310,7 @@ const translations = {
         "<span class='hero-hello'>Здравейте,</span><span class='hero-name-line hero-name-line-bg'>казвам се Пламена.</span>",
       intro:
         "Създавам визуални идентичности, дигитални кампании, уеб оформления, имейл дизайни, печатни материали и презентационни дизайни, които помагат на брандовете да комуникират идеите си ясно и последователно.",
-      primaryAction: "Виж избрани проекти",
+      primaryAction: "Разгледай подбрани проекти",
       secondaryAction: "Свържи се с мен",
       stats: ["Години опит", "Създадени дизайни", "Компании, с които съм работила"],
       preview: "Преглед на портфолио",
@@ -326,7 +326,7 @@ const translations = {
       eyebrow: "За мен",
       title: "Дизайнерски профил",
       intro:
-        "Работя като графичен дизайнер от три години в българска маркетингова агенция. В работата си създавам визуални материали за социални мрежи, дигитални кампании, уебсайтове, имейл кампании, печатни материали, презентации, концепции за опаковки, проекти за бранд идентичност и други комуникационни формати.",
+        "Работя като графичен дизайнер <span class='about-nowrap'>от <strong class='about-emphasis'>3 години</strong></span> в българска маркетингова агенция. В работата си създавам визуални материали за социални мрежи, дигитални кампании, уебсайтове, имейл кампании, печатни материали, презентации, концепции за опаковки, проекти за бранд идентичност и други комуникационни формати.",
       body:
         "Този опит ми помогна да изградя практичен и структуриран подход към дизайна, с фокус върху ясната визуална комуникация, последователното представяне на бранда и обмислените решения, съобразени с целите на всеки проект.",
       strengthsTitle: "Основни силни страни",
