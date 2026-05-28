@@ -74,7 +74,6 @@ a {
 
 .about,
 .work,
-.instagram-feeds,
 .services,
 .contact {
   content-visibility: auto;
@@ -814,7 +813,7 @@ html[data-theme="dark"] .theme-toggle {
 .about,
 .services,
 .work,
-.instagram-feeds,
+.barecare-case-study,
 .contact {
   padding-top: 104px;
 }
@@ -1007,186 +1006,141 @@ html[data-theme="dark"] .theme-toggle {
   margin-bottom: 34px;
 }
 
-.instagram-feeds {
-  padding-top: 74px;
-}
-
-.instagram-profile-eyebrow {
-  margin-bottom: 28px;
-}
-
-.instagram-feed-grid {
+.barecare-case-study {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 18px;
-}
-
-.instagram-feed-card {
-  position: relative;
-  overflow: hidden;
-  padding: 22px;
-}
-
-.instagram-feed-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 18% 0%, rgba(109, 66, 255, 0.13), transparent 34%),
-    radial-gradient(circle at 96% 18%, rgba(190, 154, 255, 0.18), transparent 28%);
-  pointer-events: none;
-}
-
-.instagram-feed-top,
-.instagram-mini-grid,
-.instagram-embed-grid,
-.instagram-feed-card p,
-.instagram-feed-link {
-  position: relative;
-  z-index: 1;
-}
-
-.instagram-feed-top {
-  display: flex;
+  grid-template-columns: minmax(340px, 0.92fr) minmax(300px, 0.78fr);
+  gap: clamp(36px, 5vw, 76px);
   align-items: center;
-  gap: 14px;
+  padding-top: 96px;
 }
 
-.instagram-mark {
-  display: grid;
-  width: 48px;
-  height: 48px;
-  place-items: center;
-  flex: 0 0 48px;
-  border-radius: 16px;
-  color: white;
-  background:
-    radial-gradient(circle at 24% 16%, #ffd28b, transparent 28%),
-    linear-gradient(135deg, #6d42ff, #c13cff 58%, #ff6b8a);
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  box-shadow: 0 16px 30px rgba(109, 66, 255, 0.22);
+.barecare-copy {
+  max-width: 660px;
 }
 
-.instagram-brand-mark {
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  background: #fff;
-}
-
-.instagram-brand-mark img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: inherit;
-}
-
-.instagram-feed-card h3 {
+.barecare-copy h2 {
   margin: 0;
-  font-size: 1.08rem;
-  letter-spacing: -0.035em;
+  color: var(--hero);
+  font-size: clamp(3.35rem, 7.1vw, 6.9rem);
+  line-height: 0.88;
+  letter-spacing: -0.065em;
 }
 
-.instagram-feed-card span:not(.instagram-mark) {
+.barecare-copy h2 span {
+  display: block;
+}
+
+.barecare-copy h2 span + span {
+  color: #2b2145;
+  font-weight: 500;
+}
+
+.barecare-tag {
+  display: inline-flex;
+  max-width: 100%;
+  margin: 24px 0 0;
+  padding: 9px 16px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), #b35ad8);
+  box-shadow: 0 14px 30px rgba(109, 66, 255, 0.2);
+  font-size: 0.93rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.barecare-summary {
+  max-width: 620px;
+  margin: 24px 0 0;
   color: var(--muted);
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.72;
 }
 
-.instagram-mini-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin: 22px 0;
-}
-
-.instagram-mini-grid span {
-  aspect-ratio: 1;
-  border-radius: 14px;
-  background:
-    linear-gradient(135deg, rgba(109, 66, 255, 0.9), rgba(182, 159, 255, 0.5)),
-    var(--soft);
-}
-
-.instagram-mini-grid span:nth-child(2n) {
-  background: linear-gradient(135deg, #170d34, #6d42ff);
-}
-
-.instagram-mini-grid span:nth-child(3n) {
-  background: linear-gradient(135deg, #f7f3ff, #b69fff);
-}
-
-.instagram-feed-card-embedded {
-  padding: 26px;
-}
-
-.instagram-feed-card-embedded .instagram-feed-top {
-  margin-bottom: 22px;
-}
-
-.instagram-embed-grid {
+.barecare-info-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  align-items: start;
-  margin: 24px 0 20px;
+  gap: clamp(18px, 3vw, 34px);
+  margin-top: clamp(52px, 6vw, 78px);
 }
 
-.instagram-embed-frame {
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 18px 36px rgba(28, 18, 62, 0.08);
+.barecare-info-icon {
+  display: block;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  object-fit: contain;
 }
 
-.instagram-embed-frame .instagram-media,
-.instagram-embed-frame iframe {
-  width: 100% !important;
-  min-width: 0 !important;
-  max-width: 540px !important;
-  margin: 0 auto !important;
-}
-
-.instagram-embed-frame .instagram-media {
-  display: block !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-.instagram-embed-frame .instagram-media a {
-  display: grid;
-  min-height: 180px;
-  place-items: center;
-  padding: 24px;
-  color: var(--accent);
+.barecare-info-item h3 {
+  margin: 0 0 13px;
+  color: var(--hero);
+  font-size: 0.82rem;
   font-weight: 800;
-  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
-.instagram-feed-card p {
+.barecare-info-item p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.62;
 }
 
-.instagram-feed-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 42px;
-  margin-top: 20px;
-  padding: 0 16px;
-  border-radius: 999px;
-  color: white;
-  background: linear-gradient(135deg, var(--accent), #8766ff);
+.barecare-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 2.2vw, 28px);
+  margin: clamp(52px, 6vw, 76px) 0 0;
+}
+
+.barecare-stat-grid div {
+  min-width: 0;
+}
+
+.barecare-stat-grid dt {
+  color: var(--hero);
+  font-size: clamp(1.45rem, 2.4vw, 2.5rem);
   font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
-.instagram-feed-link span {
-  color: inherit;
+.barecare-stat-grid div:last-child dt {
+  font-size: clamp(0.88rem, 1.1vw, 1.05rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.barecare-stat-grid dd {
+  max-width: 116px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.22;
+  text-transform: none;
+}
+
+.barecare-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin: 0;
+}
+
+.barecare-case-image {
+  display: block;
+  width: clamp(360px, 31vw, 600px);
+  height: auto;
+  max-width: 100%;
+  max-height: min(86vh, 1080px);
+  object-fit: contain;
+  filter: drop-shadow(0 28px 56px rgba(25, 15, 55, 0.16));
 }
 
 .field-filters {
@@ -2357,19 +2311,22 @@ html[data-theme="dark"] .field-section {
   box-shadow: 0 22px 54px rgba(3, 2, 10, 0.34);
 }
 
-html[data-theme="dark"] .instagram-feed-card::before {
-  background:
-    radial-gradient(circle at 18% 0%, rgba(155, 124, 255, 0.16), transparent 34%),
-    radial-gradient(circle at 96% 18%, rgba(190, 154, 255, 0.12), transparent 28%);
+html[data-theme="dark"] .barecare-copy h2,
+html[data-theme="dark"] .barecare-info-item h3,
+html[data-theme="dark"] .barecare-stat-grid dt {
+  color: #f7f3ff;
 }
 
-html[data-theme="dark"] .instagram-embed-frame {
-  border-color: rgba(226, 216, 255, 0.14);
-  box-shadow: 0 18px 36px rgba(3, 2, 10, 0.24);
+html[data-theme="dark"] .barecare-copy h2 span + span {
+  color: #d7cdf4;
 }
 
-html[data-theme="dark"] .instagram-mini-grid span:nth-child(3n) {
-  background: linear-gradient(135deg, #2b2049, #8766ff);
+html[data-theme="dark"] .barecare-tag {
+  box-shadow: 0 16px 34px rgba(3, 2, 10, 0.28);
+}
+
+html[data-theme="dark"] .barecare-case-image {
+  filter: drop-shadow(0 30px 64px rgba(3, 2, 10, 0.38));
 }
 
 html[data-theme="dark"] .slider-stage {
@@ -2589,7 +2546,8 @@ html[data-theme="dark"] .lightbox-close {
   }
 
   .hero-inner,
-  .about-grid {
+  .about-grid,
+  .barecare-case-study {
     grid-template-columns: 1fr;
   }
 
@@ -2613,7 +2571,8 @@ html[data-theme="dark"] .lightbox-close {
   .field-copy,
   .field-description,
   .field-tools,
-  .instagram-feed-card,
+  .barecare-copy,
+  .barecare-info-item,
   .contact-copy {
     text-align: center;
   }
@@ -2624,6 +2583,7 @@ html[data-theme="dark"] .lightbox-close {
   .field-copy h3,
   .field-description,
   .field-live-link,
+  .barecare-copy,
   .contact-card h2,
   .contact-copy > p:not(.eyebrow) {
     margin-left: auto;
@@ -2641,8 +2601,7 @@ html[data-theme="dark"] .lightbox-close {
   .field-filters,
   .field-tools li,
   .field-live-link,
-  .contact-links,
-  .instagram-feed-top {
+  .contact-links {
     justify-content: center;
   }
 
@@ -2697,17 +2656,22 @@ html[data-theme="dark"] .lightbox-close {
     grid-template-columns: 1fr;
   }
 
-  .instagram-feed-grid {
-    grid-template-columns: 1fr;
+  .barecare-case-study {
+    gap: 34px;
   }
 
-  .instagram-embed-grid {
-    grid-template-columns: 1fr;
+  .barecare-stat-grid dd {
+    margin-right: auto;
+    margin-left: auto;
   }
 
-  .instagram-embed-frame {
-    width: min(100%, 540px);
-    justify-self: center;
+  .barecare-info-icon {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .barecare-case-image {
+    width: min(100%, 390px);
   }
 
   .field-section {
@@ -2827,12 +2791,19 @@ html[data-theme="dark"] .lightbox-close {
     padding-inline: 0;
   }
 
-  .instagram-feed-card-embedded {
-    padding: 18px;
+  .barecare-info-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 42px;
   }
 
-  .instagram-embed-frame .instagram-media a {
-    min-height: 160px;
+  .barecare-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 42px;
+  }
+
+  .barecare-case-image {
+    width: min(100%, 360px);
   }
 
   .site-header {
@@ -2966,6 +2937,10 @@ html[data-theme="dark"] .lightbox-close {
     width: min(92vw, 420px);
   }
 
+  .hero-picture-words {
+    display: none;
+  }
+
   .device-scene {
     inset: 0;
   }
@@ -3053,7 +3028,7 @@ html[data-theme="dark"] .lightbox-close {
   .about,
   .services,
   .work,
-  .instagram-feeds,
+  .barecare-case-study,
   .contact {
     padding-top: 76px;
   }
@@ -3062,6 +3037,23 @@ html[data-theme="dark"] .lightbox-close {
 @media (max-width: 480px) {
   .hero h1 .hero-name-line-bg {
     font-size: 2.45rem;
+  }
+
+  .barecare-copy h2 {
+    font-size: clamp(2.6rem, 14.5vw, 3.55rem);
+  }
+
+  .barecare-tag {
+    justify-content: center;
+    font-size: 0.78rem;
+  }
+
+  .barecare-stat-grid {
+    gap: 22px 14px;
+  }
+
+  .barecare-case-image {
+    width: min(88vw, 330px);
   }
 }
 

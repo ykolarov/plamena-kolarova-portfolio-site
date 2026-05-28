@@ -12,7 +12,6 @@ const lightboxImage = document.querySelector("[data-lightbox-image]");
 const lightboxTitle = document.querySelector("[data-lightbox-title]");
 const lightboxOriginal = document.querySelector("[data-lightbox-original]");
 const lightboxCloseButtons = document.querySelectorAll("[data-lightbox-close]");
-const instagramSection = document.querySelector("#instagram-feeds");
 const defaultContactFormEndpoint = "https://formsubmit.co/ajax/kolarovaplamena@gmail.com";
 
 const translations = {
@@ -216,27 +215,33 @@ const translations = {
         },
       },
     },
-    instagramFeeds: {
-      eyebrow: "Instagram profile",
-      cards: [
+    barecareCaseStudy: {
+      eyebrow: "Case study",
+      titleTop: "Barecare",
+      titleBottom: "Cosmetics",
+      tag: "Instagram Content Campaigns & Brand Communication",
+      summary:
+        "Barecare Cosmetics is a Korean cosmetics retailer in Bulgaria. I create social media content that is clean, informative and visually consistent across all campaigns and product categories.",
+      statsLabel: "Barecare project highlights",
+      info: [
         {
-          title: "K-Zone Beauty",
-          handle: "@kzonebeauty",
-          text: "Beauty and skincare campaign visuals, product launches, and ongoing feed design.",
-          cta: "Open full feed",
+          title: "My role",
+          text: "Graphic designer responsible for creating Instagram content, campaigns, product graphics, and supporting materials.",
         },
         {
-          title: "Beauty Army BG",
-          handle: "@beautyarmy.bg",
-          text: "Social media visuals for beauty products, promotions, and branded content series.",
-          cta: "Open full feed",
+          title: "Goal",
+          text: "Create a consistent visual style that highlights products, communicates promotions clearly, and builds a strong brand presence on Instagram.",
         },
         {
-          title: "Barecare Cosmetics",
-          handle: "@barecarecosmetics",
-          text: "Barecare Cosmetics is the largest distributor of Korean cosmetics in Bulgaria. Over the past three years, I have worked on the brand’s Instagram content, maintaining the visual structure of the feed and creating infographics, stories, campaign designs, and other supporting visual materials.",
-          cta: "Open full feed",
+          title: "Approach",
+          text: "Clean hierarchy, soft colours, product focus, readable typography, and balanced layouts across content and campaigns.",
         },
+      ],
+      stats: [
+        { value: "3", label: "Years of collaboration" },
+        { value: "500+", label: "Posts and stories designed" },
+        { value: "50+", label: "Campaigns and product launches" },
+        { value: "Consistent", label: "Visual identity across all content" },
       ],
     },
     contact: {
@@ -478,27 +483,33 @@ const translations = {
         },
       },
     },
-    instagramFeeds: {
-      eyebrow: "Instagram профил",
-      cards: [
+    barecareCaseStudy: {
+      eyebrow: "Казус",
+      titleTop: "Barecare",
+      titleBottom: "Cosmetics",
+      tag: "Instagram кампании и бранд комуникация",
+      summary:
+        "Barecare Cosmetics е ритейлър на корейска козметика в България. Създавам съдържание за социални мрежи, което е чисто, информативно и визуално последователно във всички кампании и продуктови категории.",
+      statsLabel: "Акценти от проекта Barecare",
+      info: [
         {
-          title: "K-Zone Beauty",
-          handle: "@kzonebeauty",
-          text: "Визии за beauty и skincare кампании, продуктови лансирания и последователен feed дизайн.",
-          cta: "Отвори целия профил",
+          title: "Моята роля",
+          text: "Графичен дизайнер, отговорен за Instagram съдържание, кампании, продуктови визии и допълнителни материали.",
         },
         {
-          title: "Beauty Army BG",
-          handle: "@beautyarmy.bg",
-          text: "Визуално съдържание за beauty продукти, промоции и брандирани серии за социални мрежи.",
-          cta: "Отвори целия профил",
+          title: "Цел",
+          text: "Създаване на последователен визуален стил, който представя продуктите, комуникира промоциите ясно и изгражда силно присъствие в Instagram.",
         },
         {
-          title: "Barecare Cosmetics",
-          handle: "@barecarecosmetics",
-          text: "Barecare Cosmetics е най-големият дистрибутор на корейска козметика в България. През последните три години работя по Instagram съдържанието на бранда, като поддържам визуалната структура на профила и създавам инфографики, сторита, дизайни за кампании и други съпътстващи визуални материали.",
-          cta: "Отвори целия профил",
+          title: "Подход",
+          text: "Ясна йерархия, меки цветове, продуктов фокус, четлива типография и балансирани оформления за съдържание и кампании.",
         },
+      ],
+      stats: [
+        { value: "3", label: "Години сътрудничество" },
+        { value: "500+", label: "Постове и сторита" },
+        { value: "50+", label: "Кампании и продуктови лансирания" },
+        { value: "Последователна", label: "Визуална идентичност във всяко съдържание" },
       ],
     },
     contact: {
@@ -910,14 +921,28 @@ const applyLanguage = (language) => {
   });
   updateFieldSections(copy);
 
-  if (copy.instagramFeeds) {
-    setText("#instagram-feeds .instagram-profile-eyebrow", copy.instagramFeeds.eyebrow);
-    copy.instagramFeeds.cards.forEach((card, index) => {
-      const item = index + 1;
-      setText(`.instagram-feed-card:nth-child(${item}) h3`, card.title);
-      setText(`.instagram-feed-card:nth-child(${item}) .instagram-feed-top span:not(.instagram-mark)`, card.handle);
-      setText(`.instagram-feed-card:nth-child(${item}) > p`, card.text);
-      setText(`.instagram-feed-card:nth-child(${item}) .instagram-feed-link`, `${card.cta} <span aria-hidden="true">↗</span>`, { html: true });
+  if (copy.barecareCaseStudy) {
+    const barecare = copy.barecareCaseStudy;
+    setText("#barecare-case-study .barecare-eyebrow", barecare.eyebrow);
+    setText(
+      "#barecare-title",
+      `<span>${barecare.titleTop}</span><span>${barecare.titleBottom}</span>`,
+      { html: true },
+    );
+    setText("#barecare-case-study .barecare-tag", barecare.tag);
+    setText("#barecare-case-study .barecare-summary", barecare.summary);
+    setAttribute("#barecare-case-study .barecare-stat-grid", "aria-label", barecare.statsLabel);
+
+    barecare.info.forEach((item, index) => {
+      const child = index + 1;
+      setText(`#barecare-case-study .barecare-info-item:nth-child(${child}) h3`, item.title);
+      setText(`#barecare-case-study .barecare-info-item:nth-child(${child}) p`, item.text);
+    });
+
+    barecare.stats.forEach((item, index) => {
+      const child = index + 1;
+      setText(`#barecare-case-study .barecare-stat-grid div:nth-child(${child}) dt`, item.value);
+      setText(`#barecare-case-study .barecare-stat-grid div:nth-child(${child}) dd`, item.label);
     });
   }
 
@@ -1117,49 +1142,6 @@ fieldFilters.forEach((filter) => {
     });
   });
 });
-
-const setupInstagramEmbeds = () => {
-  if (!instagramSection) return;
-
-  let hasRequestedEmbed = false;
-  const loadEmbeds = () => {
-    if (hasRequestedEmbed) return;
-
-    hasRequestedEmbed = true;
-
-    if (window.instgrm?.Embeds?.process) {
-      window.instgrm.Embeds.process();
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.instagram.com/embed.js";
-    document.body.appendChild(script);
-  };
-
-  if (!("IntersectionObserver" in window)) {
-    runWhenIdle(loadEmbeds, 2400);
-    return;
-  }
-
-  const instagramObserver = new IntersectionObserver(
-    (entries) => {
-      if (!entries.some((entry) => entry.isIntersecting)) return;
-
-      instagramObserver.disconnect();
-      runWhenIdle(loadEmbeds, 1800);
-    },
-    {
-      rootMargin: "700px 0px",
-      threshold: 0.01,
-    },
-  );
-
-  instagramObserver.observe(instagramSection);
-};
-
-setupInstagramEmbeds();
 
 const observer = new IntersectionObserver(
   (entries) => {
