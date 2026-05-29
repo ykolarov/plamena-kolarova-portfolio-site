@@ -1265,6 +1265,10 @@ html[data-theme="dark"] .theme-toggle {
   font-weight: 700;
 }
 
+.field-section[data-field="print-design"] .field-copy h3 strong {
+  padding-top: 0.08em;
+}
+
 .field-description {
   max-width: 240px;
   margin: 24px 0 0;
