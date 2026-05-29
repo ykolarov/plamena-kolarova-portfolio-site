@@ -319,23 +319,16 @@ html[data-theme="dark"] .theme-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.34em;
+  width: fit-content;
   color: white;
   font-size: clamp(1.65rem, 3vw, 3.05rem);
   line-height: 1.02;
   letter-spacing: -0.055em;
 }
 
-.hero-wave {
-  display: block;
-  width: clamp(42px, 1.45em, 78px);
-  height: clamp(42px, 1.45em, 78px);
-  flex: 0 0 auto;
-  object-fit: contain;
-  transform: translateY(-0.04em);
-}
-
 .hero h1 .hero-name-line {
+  width: fit-content;
+  max-width: 100%;
   color: #b69fff;
   font-size: clamp(3.25rem, 6.2vw, 6.25rem);
   line-height: 0.9;
@@ -2598,8 +2591,17 @@ html[data-theme="dark"] .lightbox-close {
     margin-right: auto;
   }
 
+  .hero h1 {
+    align-items: center;
+  }
+
   .hero h1 .hero-hello {
+    align-self: center;
     justify-content: center;
+  }
+
+  .hero h1 .hero-name-line {
+    align-self: center;
   }
 
   .hero-actions,
