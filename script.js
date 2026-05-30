@@ -243,6 +243,35 @@ const translations = {
         { value: "Consistent", label: "Visual identity across all content" },
       ],
     },
+    cvetyCaseStudy: {
+      eyebrow: "Website design case study",
+      titleTop: "Cvety Vassileva",
+      titleBottom: "E-Business Card",
+      summary:
+        "A compact personal website concept designed to present Cvety Vassileva's digital presence in a clear, elegant, and easy-to-navigate format.",
+      liveLink: "View live website",
+      statsLabel: "Cvety Vassileva e-business card project highlights",
+      info: [
+        {
+          title: "My role",
+          text: "Website layout designer responsible for visual structure, page flow, section hierarchy, and final digital presentation.",
+        },
+        {
+          title: "Goal",
+          text: "Create a polished online business card that quickly communicates identity, services, contact options, and social presence.",
+        },
+        {
+          title: "Approach",
+          text: "Clean one-page structure, focused hero area, clear call-to-action placement, soft visual hierarchy, and mobile-friendly spacing.",
+        },
+      ],
+      stats: [
+        { value: "1-page", label: "Website structure" },
+        { value: "Responsive", label: "Layout direction" },
+        { value: "Clear", label: "Contact flow" },
+        { value: "Personal", label: "Brand presence" },
+      ],
+    },
     contact: {
       eyebrow: "Let’s work together",
       title: "Need design support?",
@@ -508,6 +537,35 @@ const translations = {
         { value: "500+", label: "Публикации и сторита" },
         { value: "50+", label: "Кампании и продуктови лансирания" },
         { value: "Последователна", label: "визуална идентичност във всички формати съдържание" },
+      ],
+    },
+    cvetyCaseStudy: {
+      eyebrow: "Казус за уеб дизайн",
+      titleTop: "Cvety Vassileva",
+      titleBottom: "Е-бизнес картичка",
+      summary:
+        "Компактна концепция за личен уебсайт, създадена да представи дигиталното присъствие на Цвети Василева в ясен, елегантен и лесен за навигация формат.",
+      liveLink: "Вижте сайта",
+      statsLabel: "Акценти от проекта Cvety Vassileva",
+      info: [
+        {
+          title: "Моята роля",
+          text: "Дизайнер на уеб оформление, отговорен за визуалната структура, потока на страницата, йерархията на секциите и финалното дигитално представяне.",
+        },
+        {
+          title: "Цел",
+          text: "Да се създаде полиран онлайн бизнес профил, който бързо комуникира идентичност, услуги, опции за контакт и социално присъствие.",
+        },
+        {
+          title: "Подход",
+          text: "Изчистена едностранична структура, фокусирана hero зона, ясно позиционирани call-to-action елементи, мека визуална йерархия и удобни отстояния за мобилни устройства.",
+        },
+      ],
+      stats: [
+        { value: "1 страница", label: "Структура на сайта" },
+        { value: "Адаптивна", label: "Посока на оформлението" },
+        { value: "Ясен", label: "Поток за контакт" },
+        { value: "Лично", label: "Бранд присъствие" },
       ],
     },
     contact: {
@@ -940,6 +998,31 @@ const applyLanguage = (language) => {
       const child = index + 1;
       setText(`#barecare-case-study .barecare-stat-grid div:nth-child(${child}) dt`, item.value);
       setText(`#barecare-case-study .barecare-stat-grid div:nth-child(${child}) dd`, item.label);
+    });
+  }
+
+  if (copy.cvetyCaseStudy) {
+    const cvety = copy.cvetyCaseStudy;
+    setText("#cvety-case-study .barecare-eyebrow", cvety.eyebrow);
+    setText(
+      "#cvety-title",
+      `<span>${cvety.titleTop}</span><span>${cvety.titleBottom}</span>`,
+      { html: true },
+    );
+    setText("#cvety-case-study .barecare-summary", cvety.summary);
+    setText("#cvety-case-study .cvety-live-link", cvety.liveLink);
+    setAttribute("#cvety-case-study .barecare-stat-grid", "aria-label", cvety.statsLabel);
+
+    cvety.info.forEach((item, index) => {
+      const child = index + 1;
+      setText(`#cvety-case-study .barecare-info-item:nth-child(${child}) h3`, item.title);
+      setText(`#cvety-case-study .barecare-info-item:nth-child(${child}) p`, item.text);
+    });
+
+    cvety.stats.forEach((item, index) => {
+      const child = index + 1;
+      setText(`#cvety-case-study .barecare-stat-grid div:nth-child(${child}) dt`, item.value);
+      setText(`#cvety-case-study .barecare-stat-grid div:nth-child(${child}) dd`, item.label);
     });
   }
 
