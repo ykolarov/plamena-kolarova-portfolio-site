@@ -221,6 +221,7 @@ const translations = {
       titleBottom: "Cosmetics",
       summary:
         "Barecare Cosmetics is a leading Korean cosmetics retailer in Bulgaria. I create social media content that is clean, informative and visually consistent across all campaigns and product categories.",
+      instagramLink: "View Instagram",
       statsLabel: "Barecare project highlights",
       info: [
         {
@@ -517,6 +518,7 @@ const translations = {
       titleBottom: "Козметика",
       summary:
         "Barecare Cosmetics е един от водещите търговци на корейска козметика в България. Създавам съдържание за социалните мрежи, което е изчистено, информативно и визуално последователно във всички кампании и продуктови категории.",
+      instagramLink: "Вижте Instagram",
       statsLabel: "Акценти от проекта Barecare",
       info: [
         {
@@ -986,6 +988,7 @@ const applyLanguage = (language) => {
       { html: true },
     );
     setText("#barecare-case-study .barecare-summary", barecare.summary);
+    setText("#barecare-case-study .barecare-instagram-link", barecare.instagramLink);
     setAttribute("#barecare-case-study .barecare-stat-grid", "aria-label", barecare.statsLabel);
 
     barecare.info.forEach((item, index) => {

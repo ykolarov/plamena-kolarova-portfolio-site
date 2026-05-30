@@ -1064,8 +1064,16 @@ html[data-theme="dark"] .theme-toggle {
 .barecare-info-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 34px);
-  margin-top: clamp(52px, 6vw, 78px);
+  gap: clamp(14px, 2vw, 22px);
+  margin-top: clamp(42px, 5vw, 60px);
+}
+
+.barecare-info-item {
+  padding: clamp(22px, 2vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 16px 40px rgba(25, 15, 55, 0.07);
 }
 
 .barecare-info-icon {
@@ -1122,6 +1130,11 @@ html[data-theme="dark"] .theme-toggle {
   text-transform: none;
 }
 
+.barecare-instagram-link,
+.cvety-live-link {
+  margin-top: 24px;
+}
+
 .barecare-visual {
   display: flex;
   align-items: center;
@@ -1155,19 +1168,6 @@ html[data-theme="dark"] .theme-toggle {
   letter-spacing: 0;
 }
 
-.cvety-case-study .barecare-info-grid {
-  gap: clamp(14px, 2vw, 22px);
-  margin-top: clamp(42px, 5vw, 60px);
-}
-
-.cvety-case-study .barecare-info-item {
-  padding: clamp(22px, 2vw, 28px);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.74);
-  box-shadow: 0 16px 40px rgba(25, 15, 55, 0.07);
-}
-
 .cvety-case-study .barecare-stat-grid {
   gap: clamp(14px, 1.6vw, 20px);
 }
@@ -1180,10 +1180,6 @@ html[data-theme="dark"] .theme-toggle {
 
 .cvety-case-study .barecare-stat-grid dd {
   max-width: 140px;
-}
-
-.cvety-live-link {
-  margin-top: 24px;
 }
 
 .cvety-case-study .cvety-case-image {
@@ -2385,7 +2381,7 @@ html[data-theme="dark"] .barecare-case-image {
   filter: drop-shadow(0 30px 64px rgba(3, 2, 10, 0.38));
 }
 
-html[data-theme="dark"] .cvety-case-study .barecare-info-item {
+html[data-theme="dark"] .barecare-info-item {
   background: rgba(31, 24, 51, 0.72);
   box-shadow: 0 18px 46px rgba(3, 2, 10, 0.28);
 }
