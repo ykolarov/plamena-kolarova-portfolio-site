@@ -1180,7 +1180,7 @@ html[data-theme="dark"] .theme-toggle {
 }
 
 .cvety-case-study .cvety-case-image {
-  width: min(100%, 800px);
+  width: min(94%, 740px);
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -1191,7 +1191,27 @@ html[data-theme="dark"] .theme-toggle {
 @media (min-width: 981px) {
   html[lang="bg"] #cvety-case-study .barecare-info-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(12px, 1.5vw, 18px);
     margin-top: clamp(26px, 3vw, 42px);
+  }
+
+  html[lang="bg"] #cvety-case-study .barecare-info-item {
+    padding: clamp(18px, 1.55vw, 22px);
+  }
+
+  html[lang="bg"] #cvety-case-study .barecare-info-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 16px;
+  }
+
+  html[lang="bg"] #cvety-case-study .barecare-info-item h3 {
+    margin-bottom: 10px;
+  }
+
+  html[lang="bg"] #cvety-case-study .barecare-info-item p {
+    font-size: 0.84rem;
+    line-height: 1.56;
   }
 
   html[lang="bg"] #cvety-case-study .barecare-info-item:nth-child(3) {
