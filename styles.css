@@ -1102,13 +1102,17 @@ html[data-theme="dark"] .theme-toggle {
 
 .barecare-stat-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(14px, 1.6vw, 20px);
+  grid-template-columns: repeat(4, max-content);
+  gap: clamp(18px, 4vw, 72px);
+  justify-content: space-between;
   margin: clamp(52px, 6vw, 76px) 0 0;
 }
 
 .barecare-stat-grid div {
+  display: flex;
   min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .barecare-stat-grid dt {
@@ -1182,6 +1186,17 @@ html[data-theme="dark"] .theme-toggle {
   background: transparent;
   box-shadow: none;
   filter: drop-shadow(0 28px 56px rgba(25, 15, 55, 0.14));
+}
+
+@media (min-width: 981px) {
+  html[lang="bg"] #cvety-case-study .barecare-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: clamp(26px, 3vw, 42px);
+  }
+
+  html[lang="bg"] #cvety-case-study .barecare-info-item:nth-child(3) {
+    grid-column: 1 / -1;
+  }
 }
 
 .field-filters {
