@@ -2916,6 +2916,11 @@ html[data-theme="dark"] .lightbox-close {
     margin-top: 42px;
   }
 
+  .barecare-stat-grid div {
+    align-items: center;
+    text-align: center;
+  }
+
   .barecare-info-item p {
     max-width: 300px;
     margin-right: auto;

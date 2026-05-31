@@ -700,7 +700,8 @@ const updateFieldSections = (copy) => {
     section.querySelector(".slider-arrow-next")?.setAttribute("aria-label", fieldCopy.next);
     section.querySelector("[data-slider-dots]")?.setAttribute("aria-label", fieldCopy.dots);
     section.querySelectorAll(".slider-dot").forEach((dot, index) => {
-      dot.setAttribute("aria-label", `${copy.work.common.slideLabel} ${index + 1}`);
+      const slideIndex = Number(dot.dataset.slideIndex ?? index);
+      dot.setAttribute("aria-label", `${copy.work.common.slideLabel} ${slideIndex + 1}`);
     });
   });
 };
@@ -1131,6 +1132,26 @@ setupBannerBackdrops();
 setupImageViewer();
 applyLanguage(currentLanguage);
 
+const getSliderDotCount = (slider, slideCount) => {
+  const requestedCount = Number(slider.dataset.dotCount);
+
+  if (Number.isInteger(requestedCount) && requestedCount > 0) {
+    return Math.min(requestedCount, slideCount);
+  }
+
+  return slideCount;
+};
+
+const getDotSlideIndex = (dotIndex, dotCount, slideCount) => {
+  if (dotCount <= 1 || slideCount <= 1) return 0;
+  return Math.round((dotIndex / (dotCount - 1)) * (slideCount - 1));
+};
+
+const getActiveDotIndex = (slideIndex, dotCount, slideCount) => {
+  if (dotCount <= 1 || slideCount <= 1) return 0;
+  return Math.round((slideIndex / (slideCount - 1)) * (dotCount - 1));
+};
+
 const updateSlider = (slider, targetIndex) => {
   const slides = Array.from(slider.querySelectorAll(".slider-slide"));
   const dots = Array.from(slider.querySelectorAll(".slider-dot"));
@@ -1138,6 +1159,7 @@ const updateSlider = (slider, targetIndex) => {
   if (!slides.length) return;
 
   const nextIndex = (targetIndex + slides.length) % slides.length;
+  const activeDotIndex = getActiveDotIndex(nextIndex, dots.length, slides.length);
 
   slides.forEach((slide, index) => {
     const isActive = index === nextIndex;
@@ -1156,7 +1178,7 @@ const updateSlider = (slider, targetIndex) => {
   });
 
   dots.forEach((dot, index) => {
-    const isActive = index === nextIndex;
+    const isActive = index === activeDotIndex;
     dot.classList.toggle("is-active", isActive);
     dot.setAttribute("aria-selected", String(isActive));
   });
@@ -1174,16 +1196,19 @@ sliders.forEach((slider) => {
 
   if (dotsContainer) {
     dotsContainer.innerHTML = "";
+    const dotCount = getSliderDotCount(slider, slides.length);
 
-    slides.forEach((_, index) => {
+    Array.from({ length: dotCount }).forEach((_, index) => {
+      const slideIndex = getDotSlideIndex(index, dotCount, slides.length);
       const dot = document.createElement("button");
       dot.className = "slider-dot";
       dot.type = "button";
+      dot.dataset.slideIndex = String(slideIndex);
       dot.setAttribute(
         "aria-label",
-        `${translations[currentLanguage].work.common.slideLabel} ${index + 1}`,
+        `${translations[currentLanguage].work.common.slideLabel} ${slideIndex + 1}`,
       );
-      dot.addEventListener("click", () => updateSlider(slider, index));
+      dot.addEventListener("click", () => updateSlider(slider, slideIndex));
       dotsContainer.appendChild(dot);
     });
   }
