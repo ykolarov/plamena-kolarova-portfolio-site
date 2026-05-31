@@ -375,7 +375,7 @@ const translations = {
       ],
       toolsTitle: "Инструменти",
       additionalToolsTitle: "Допълнителни инструменти",
-      basics: "основи",
+      basics: "Basics",
     },
     services: {
       eyebrow: "Услуги",
