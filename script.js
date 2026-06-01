@@ -48,7 +48,7 @@ const translations = {
       title:
         "<span class='hero-hello'><span class='hero-hello-text'>Hello,</span></span><span class='hero-name-line'>I’m Plamena.</span>",
       intro:
-        "I create visual identities, digital campaigns, web layouts, email designs, print materials, and presentation designs that help brands communicate their ideas clearly and consistently.",
+        "I create clear, purposeful design that helps ideas feel simple, structured, and easy to understand.",
       primaryAction: "View my work",
       secondaryAction: "Contact me",
       stats: ["Years of experience", "Designs created", "Companies worked with"],
@@ -345,7 +345,7 @@ const translations = {
       title:
         "<span class='hero-hello'><span class='hero-hello-text'>Здравейте,</span></span><span class='hero-name-line hero-name-line-bg'>казвам се Пламена.</span>",
       intro:
-        "Създавам визуални идентичности, дигитални кампании, уеб оформления, имейл дизайни, печатни материали и презентационни дизайни, които помагат на брандовете да комуникират идеите си ясно и последователно.",
+        "Създавам ясен и целенасочен дизайн, който прави идеите по-разбираеми, подредени и лесни за възприемане.",
       primaryAction: "Разгледай проектите ми",
       secondaryAction: "Свържи се с мен",
       stats: ["Години опит", "Създадени дизайни", "Компании, с които съм работила"],
