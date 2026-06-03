@@ -68,7 +68,7 @@ const translations = {
       intro:
         "For the <span class='about-nowrap'>past <strong class='about-emphasis'>three years</strong></span>, I have worked as a graphic designer in a Bulgarian marketing agency, creating visual materials for a wide range of clients across social media, digital campaigns, websites, email campaigns, print materials, presentations, packaging concepts, and brand identity projects.",
       body:
-        "Working with different clients, brands, and communication formats has helped me develop a structured and practical approach to design, focused on clear visual communication, consistent brand presentation, and solutions tailored to each project’s goals.",
+        "Working with different clients has helped me develop a structured and practical approach to design, focused on clear visual communication, consistent brand presentation, and solutions tailored to each project’s goals.",
       strengthsTitle: "Core strengths",
       strengths: [
         "Brand-focused visual thinking",
