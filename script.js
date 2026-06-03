@@ -66,7 +66,7 @@ const translations = {
       eyebrow: "About me",
       title: "Design profile",
       intro:
-        "For the <span class='about-nowrap'>past <strong class='about-emphasis'>three years</strong></span>, I have worked as a graphic designer in a Bulgarian marketing agency, creating visual materials for a wide range of clients across social media, digital campaigns, websites, email campaigns, print materials, presentations, packaging concepts, and brand identity projects.",
+        "For the <span class='about-nowrap'>past <strong class='about-emphasis'>3+ years</strong></span>, I have worked as a graphic designer in a Bulgarian marketing agency, creating visual materials for a wide range of clients across social media, digital campaigns, websites, email campaigns, print materials, presentations, packaging concepts, and brand identity projects.",
       body:
         "Working with different clients has helped me develop a structured and practical approach to design, focused on clear visual communication, consistent brand presentation, and solutions tailored to each project’s goals.",
       strengthsTitle: "Core strengths",
@@ -363,7 +363,7 @@ const translations = {
       eyebrow: "За мен",
       title: "Дизайнерски профил",
       intro:
-        "През последните <strong class='about-emphasis'>три години</strong> работя като графичен дизайнер в българска маркетингова агенция, където създавам визуални материали за различни клиенти. Опитът ми обхваща дизайн за социални мрежи, дигитални кампании, уебсайтове, имейл кампании, печатни материали, презентации, бранд идентичност и други визуални формати.",
+        "През последните <strong class='about-emphasis'>3+ години</strong> работя като графичен дизайнер в българска маркетингова агенция, където създавам визуални материали за различни клиенти. Опитът ми обхваща дизайн за социални мрежи, дигитални кампании, уебсайтове, имейл кампании, печатни материали, презентации, бранд идентичност и други визуални формати.",
       body:
         "Работата ми с различни клиенти ми помогна да развия адаптивен и практичен подход към дизайна. Научих се да адаптирам визуалния стил според нуждите на всеки бранд, като запазвам ясна комуникация, добра структура и последователно визуално представяне.",
       strengthsTitle: "Силни страни",
