@@ -1,4 +1,4 @@
-const fieldFilters = document.querySelectorAll(".field-filter");
+﻿const fieldFilters = document.querySelectorAll(".field-filter");
 const fieldSections = document.querySelectorAll(".field-section");
 const sliders = document.querySelectorAll("[data-slider]");
 const contactForm = document.querySelector("[data-contact-form]");
@@ -71,10 +71,10 @@ const translations = {
         "Working with different clients, brands, and communication formats has helped me develop a structured and practical approach to design, focused on clear visual communication, consistent brand presentation, and solutions tailored to each project’s goals.",
       strengthsTitle: "Core strengths",
       strengths: [
-        "Brand-led thinking",
-        "Clean visual systems",
-        "Detail-oriented execution",
-        "Digital-first adaptability",
+        "Brand-focused visual thinking",
+        "Strong attention to detail",
+        "Good sense of typography, colour and layout",
+        "Adaptability across formats and platforms",
       ],
       toolsTitle: "Tools",
       additionalToolsTitle: "Additional tools",
@@ -299,7 +299,7 @@ const translations = {
       },
       status: {
         sending: "Sending your message...",
-        success: "Message sent. I will get back to you soon.",
+        success: "Message sent successfully. I’ll get back to you soon.",
         error: "Sorry, the message could not be sent. Please try again or email me directly.",
       },
       subjectPrefix: "Portfolio enquiry from",
@@ -596,7 +596,7 @@ const translations = {
       },
       status: {
         sending: "Изпращам съобщението...",
-        success: "Съобщението е изпратено. Ще се свържа с вас скоро.",
+        success: "Съобщението е изпратено успешно. Ще се свържа с Вас скоро.",
         error: "Съобщението не можа да бъде изпратено. Моля, опитайте отново или ми пишете директно на имейл.",
       },
       subjectPrefix: "Запитване от портфолиото от",
@@ -758,6 +758,7 @@ const closeImageLightbox = () => {
     lightboxImage.alt = "";
   }
 
+  lightboxOriginal?.setAttribute("href", "about:blank");
   lastFocusedElement?.focus?.();
   lastFocusedElement = null;
 };
@@ -898,7 +899,7 @@ const applyTheme = (theme, { persist = true } = {}) => {
     themeToggle.setAttribute("aria-label", isDark ? copy.theme.switchToLight : copy.theme.switchToDark);
     themeIconImage?.setAttribute(
       "src",
-      isDark ? "Night_Light_Mode/Light.png" : "Night_Light_Mode/Night.png",
+      isDark ? "assets/optimized/ui-night-light-mode-light.webp?v=20260601-opt" : "assets/optimized/ui-night-light-mode-night.webp?v=20260601-opt",
     );
     setText(".theme-label", isDark ? copy.theme.toLight : copy.theme.toDark);
   }
@@ -1265,4 +1266,17 @@ const observer = new IntersectionObserver(
   },
 );
 
-revealItems.forEach((item) => observer.observe(item));
+revealItems.forEach((item) => {
+  const rect = item.getBoundingClientRect();
+  const isInitiallyVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+  if (isInitiallyVisible) {
+    item.style.transition = "none";
+    item.classList.add("is-visible");
+    requestAnimationFrame(() => {
+      item.style.transition = "";
+    });
+  } else {
+    observer.observe(item);
+  }
+});
