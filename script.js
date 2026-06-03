@@ -17,7 +17,7 @@ const defaultContactFormEndpoint = "https://formsubmit.co/ajax/kolarovaplamena@g
 const translations = {
   en: {
     meta: {
-      title: "Plamena Kolarova — Graphic Design Portfolio",
+      title: "Plamena Kolarova - Graphic Design Portfolio",
       description:
         "Portfolio of Plamena Kolarova, graphic designer working across branding, digital campaigns, web design, and 3D visuals.",
     },
@@ -314,7 +314,7 @@ const translations = {
   },
   bg: {
     meta: {
-      title: "Пламена Коларова — Портфолио графичен дизайн",
+      title: "Пламена Коларова - Портфолио графичен дизайн",
       description:
         "Портфолио на Пламена Коларова — графичен дизайнер с фокус върху брандинг, дигитални кампании, уеб дизайн и визуално съдържание.",
     },
