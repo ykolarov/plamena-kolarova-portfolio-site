@@ -2651,6 +2651,11 @@ html[data-theme="dark"] .lightbox-close {
     grid-template-columns: 1fr;
   }
 
+  .about-tools-column {
+    grid-template-rows: auto;
+    align-self: auto;
+  }
+
   .hero {
     min-height: auto;
   }
