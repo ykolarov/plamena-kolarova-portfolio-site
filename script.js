@@ -66,9 +66,11 @@ const translations = {
       eyebrow: "About me",
       title: "Design profile",
       intro:
-        "For the <span class='about-nowrap'>past <strong class='about-emphasis'>3+ years</strong></span>, I have worked as a graphic designer in a Bulgarian marketing agency, creating visual materials for a wide range of clients across social media, digital campaigns, websites, email campaigns, print materials, presentations, packaging concepts, and brand identity projects.",
+        "I help brands build a strong visual presence that captures attention, builds trust, and makes their business recognizable in the digital space.",
       body:
-        "Working with different clients has helped me develop a structured and practical approach to design, focused on clear visual communication, consistent brand presentation, and solutions tailored to each project’s goals.",
+        "For the <span class='about-nowrap'>past <strong class='about-emphasis'>3+ years</strong></span>, I have worked as a graphic designer in a marketing agency, creating designs for social media, advertising campaigns, websites, presentations, email marketing, printed materials, and brand identity. Working with a variety of clients has helped me develop a flexible approach and the ability to adapt visual communication to each brand, audience, and goal.",
+      body2:
+        "Over time, I have developed an adaptive and strategic approach to every project. I am able to capture the style, energy, and needs of different brands and translate them into a visual identity that is consistent, modern, and recognizable.",
       strengthsTitle: "Core strengths",
       strengths: [
         "Brand-focused visual thinking",
@@ -363,9 +365,11 @@ const translations = {
       eyebrow: "За мен",
       title: "Дизайнерски профил",
       intro:
-        "През последните <strong class='about-emphasis'>3+ години</strong> работя като графичен дизайнер в българска маркетингова агенция, където създавам визуални материали за различни клиенти. Опитът ми обхваща дизайн за социални мрежи, дигитални кампании, уебсайтове, имейл кампании, печатни материали, презентации, бранд идентичност и други визуални формати.",
+        "Помагам на брандове да изграждат силно визуално присъствие, което привлича внимание, изгражда доверие и прави бизнеса разпознаваем в дигиталната среда.",
       body:
-        "Работата ми с различни клиенти ми помогна да развия адаптивен и практичен подход към дизайна. Научих се да адаптирам визуалния стил според нуждите на всеки бранд, като запазвам ясна комуникация, добра структура и последователно визуално представяне.",
+        "През последните <strong class='about-emphasis'>3+ години</strong> работя като графичен дизайнер в маркетингова агенция, а работата ми обхваща дизайн за социални мрежи, рекламни кампании, уебсайтове, презентации, имейл маркетинг, печатни материали и бранд идентичност. Работата ми с различни клиенти ми помогна да развия гъвкав подход и умение да адаптирам визуалната комуникация спрямо конкретния бранд, аудитория и цел.",
+      body2:
+        "С времето изградих адаптивен и стратегически подход към всеки проект. Умея да улавям стила, енергията и нуждите на различните брандове, като ги превръщам във визуална идентичност, която е последователна, модерна и разпознаваема.",
       strengthsTitle: "Силни страни",
       strengths: [
         "Усет към визуална идентичност и бранд комуникация",
@@ -960,7 +964,8 @@ const applyLanguage = (language) => {
   setText("#about .section-heading .eyebrow", copy.about.eyebrow);
   setText("#about .section-heading h2", copy.about.title);
   setText(".about-copy p:nth-child(1)", copy.about.intro, { html: true });
-  setText(".about-copy p:nth-child(2)", copy.about.body);
+  setText(".about-copy p:nth-child(2)", copy.about.body, { html: true });
+  setText(".about-copy p:nth-child(3)", copy.about.body2);
   setText(".about-panel h3", copy.about.strengthsTitle);
   copy.about.strengths.forEach((strength, index) => {
     setText(`.check-list li:nth-child(${index + 1})`, strength);
