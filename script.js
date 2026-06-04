@@ -66,11 +66,11 @@ const translations = {
       eyebrow: "About me",
       title: "Design profile",
       intro:
-        "I help brands build a strong visual presence that captures attention, builds trust, and makes their business recognizable in the digital space.",
+        "I help brands build a <strong>strong visual presence</strong> that captures attention, builds trust, and makes their business <strong>recognizable</strong> in the digital space.",
       body:
-        "For the <span class='about-nowrap'>past <strong class='about-emphasis'>3+ years</strong></span>, I have worked as a graphic designer in a marketing agency, creating designs for social media, advertising campaigns, websites, presentations, email marketing, printed materials, and brand identity. Working with a variety of clients has helped me develop a flexible approach and the ability to adapt visual communication to each brand, audience, and goal.",
+        "For the <span class='about-nowrap'>past <strong class='about-emphasis'>3+ years</strong></span>, I have worked as a graphic designer in a <strong>marketing agency</strong>, creating designs for social media, advertising campaigns, websites, presentations, email marketing, printed materials, and brand identity. Working with a variety of clients has helped me develop a <strong>flexible approach</strong> and the ability to adapt visual communication to each brand, audience, and goal.",
       body2:
-        "Over time, I have developed an adaptive and strategic approach to every project. I am able to capture the style, energy, and needs of different brands and translate them into a visual identity that is consistent, modern, and recognizable.",
+        "Over time, I have developed an <strong>adaptive and strategic approach</strong> to every project. I am able to capture the style, energy, and needs of different brands and translate them into a visual identity that is <strong>consistent, modern, and recognizable</strong>.",
       strengthsTitle: "Core strengths",
       strengths: [
         "Brand-focused visual thinking",
@@ -365,11 +365,11 @@ const translations = {
       eyebrow: "За мен",
       title: "Дизайнерски профил",
       intro:
-        "Помагам на брандове да изграждат силно визуално присъствие, което привлича внимание, изгражда доверие и прави бизнеса разпознаваем в дигиталната среда.",
+        "Помагам на брандове да изграждат <strong>силно визуално присъствие</strong>, което привлича внимание, изгражда доверие и прави бизнеса <strong>разпознаваем</strong> в дигиталната среда.",
       body:
-        "През последните <strong class='about-emphasis'>3+ години</strong> работя като графичен дизайнер в маркетингова агенция, а работата ми обхваща дизайн за социални мрежи, рекламни кампании, уебсайтове, презентации, имейл маркетинг, печатни материали и бранд идентичност. Работата ми с различни клиенти ми помогна да развия гъвкав подход и умение да адаптирам визуалната комуникация спрямо конкретния бранд, аудитория и цел.",
+        "През последните <strong class='about-emphasis'>3+ години</strong> работя като графичен дизайнер в <strong>маркетингова агенция</strong>, а работата ми обхваща дизайн за социални мрежи, рекламни кампании, уебсайтове, презентации, имейл маркетинг, печатни материали и бранд идентичност. Работата ми с различни клиенти ми помогна да развия <strong>гъвкав подход</strong> и умение да адаптирам визуалната комуникация спрямо конкретния бранд, аудитория и цел.",
       body2:
-        "С времето изградих адаптивен и стратегически подход към всеки проект. Умея да улавям стила, енергията и нуждите на различните брандове, като ги превръщам във визуална идентичност, която е последователна, модерна и разпознаваема.",
+        "С времето изградих <strong>адаптивен и стратегически подход</strong> към всеки проект. Умея да улавям стила, енергията и нуждите на различните брандове, като ги превръщам във визуална идентичност, която е <strong>последователна, модерна и разпознаваема</strong>.",
       strengthsTitle: "Силни страни",
       strengths: [
         "Усет към визуална идентичност и бранд комуникация",
@@ -522,7 +522,7 @@ const translations = {
       titleBottom: "Козметика",
       summary:
         "Barecare Cosmetics е един от водещите търговци на корейска козметика в България. Създавам съдържание за социалните мрежи, което е изчистено, информативно и визуално последователно във всички кампании и продуктови категории.",
-      instagramLink: "Вижте Instagram",
+      instagramLink: "Разгледайте Инстаграм",
       statsLabel: "Акценти от проекта Barecare",
       info: [
         {
@@ -965,7 +965,7 @@ const applyLanguage = (language) => {
   setText("#about .section-heading h2", copy.about.title);
   setText(".about-copy p:nth-child(1)", copy.about.intro, { html: true });
   setText(".about-copy p:nth-child(2)", copy.about.body, { html: true });
-  setText(".about-copy p:nth-child(3)", copy.about.body2);
+  setText(".about-copy p:nth-child(3)", copy.about.body2, { html: true });
   setText(".about-panel h3", copy.about.strengthsTitle);
   copy.about.strengths.forEach((strength, index) => {
     setText(`.check-list li:nth-child(${index + 1})`, strength);

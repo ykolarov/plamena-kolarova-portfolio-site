@@ -867,6 +867,7 @@ html[data-theme="dark"] .theme-toggle {
 
 .about-copy strong {
   color: var(--ink);
+  font-weight: 700;
 }
 
 .about-panel h3,
